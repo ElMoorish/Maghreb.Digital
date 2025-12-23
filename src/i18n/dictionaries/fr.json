@@ -1,0 +1,168 @@
+{
+    "portal": {
+        "tagline": "Où l'Innovation Rencontre le Patrimoine",
+        "enter": "Entrer"
+    },
+    "nav": {
+        "services": "Services",
+        "blog": "Blog",
+        "portfolio": "Portfolio",
+        "about": "À Propos",
+        "contact": "Contact",
+        "getStarted": "Commencer"
+    },
+    "hero": {
+        "tagline": "Agence Digitale Premium",
+        "headline1": "Où l'Innovation",
+        "headline2": "Rencontre le Patrimoine",
+        "subheadline": "Nous connectons la région MENA à l'économie numérique mondiale — en créant des expériences qui honorent la tradition tout en embrassant l'avenir.",
+        "cta1": "Commencez Votre Voyage",
+        "cta2": "Voir Nos Réalisations",
+        "scroll": "Défiler"
+    },
+    "services": {
+        "tagline": "Notre Expertise",
+        "headline": "Trois Piliers d'Excellence",
+        "subheadline": "Du code à l'entreprise, du contenu à la communauté — nous façonnons chaque couche de votre présence numérique avec intention et soin.",
+        "learnMore": "En Savoir Plus",
+        "items": {
+            "web": {
+                "title": "Développement Web Haute Performance",
+                "hook": "Nous créons des moteurs de vente 24/7",
+                "description": "Expériences numériques ultra-rapides, optimisées SEO, construites avec Next.js et une architecture moderne. Chaque pixel est intentionnel.",
+                "features": [
+                    "Next.js 16",
+                    "CMS Headless",
+                    "SEO-First",
+                    "3D Ready"
+                ]
+            },
+            "llc": {
+                "title": "Création de LLC & Infrastructure",
+                "hook": "Votre siège international vous attend",
+                "description": "Formation d'entreprise de bout en bout avec banque, paiements et conformité — vous positionnant pour une croissance mondiale.",
+                "features": [
+                    "LLCs US/UK",
+                    "Stripe-Ready",
+                    "Conformité",
+                    "Banque FinTech"
+                ]
+            },
+            "social": {
+                "title": "Réseaux Sociaux Stratégiques",
+                "hook": "Nous gérons votre réputation numérique",
+                "description": "Stratégie sociale menée par des humains avec nuance culturelle. Nous parlons Darija, Français et Anglais — nous comprenons votre audience.",
+                "badge": "Géré par des Humains",
+                "features": [
+                    "Trilingue",
+                    "Communauté",
+                    "Engagement",
+                    "Storytelling"
+                ]
+            }
+        }
+    },
+    "portfolio": {
+        "tagline": "Travaux Sélectionnés",
+        "headline": "Études de Cas",
+        "viewProject": "Voir le Projet",
+        "viewAll": "Voir Tous les Travaux"
+    },
+    "about": {
+        "tagline": "Notre Histoire",
+        "headline": "Numériquement Natifs, Culturellement Enracinés",
+        "description1": "Fondée au cœur du Maroc, Maghrib.Digital est née d'une vision simple : l'excellence numérique ne devrait pas connaître de frontières.",
+        "description2": "Nous combinons l'expertise technique de premier ordre avec une compréhension approfondie des marchés MENA et mondiaux. Notre équipe navigue entre les mondes — rendant la complexité simple et les ambitions réalisables.",
+        "stats": {
+            "years": "Années d'Expérience",
+            "projects": "Projets Livrés",
+            "countries": "Pays Servis"
+        }
+    },
+    "contact": {
+        "tagline": "Commençons",
+        "headline": "Construisons Ensemble Quelque Chose de Remarquable",
+        "subheadline": "Que vous lanciez une nouvelle entreprise ou développiez une présence établie, nous sommes là pour vous aider à atteindre vos objectifs.",
+        "form": {
+            "name": "Nom Complet",
+            "email": "Adresse Email",
+            "company": "Entreprise",
+            "service": "Service Intéressé",
+            "selectService": "Sélectionnez un service",
+            "webDev": "Développement Web",
+            "llc": "Création de LLC",
+            "social": "Réseaux Sociaux",
+            "other": "Autre",
+            "message": "Parlez-nous de votre projet",
+            "submit": "Envoyer le Message",
+            "sending": "Envoi en cours..."
+        },
+        "info": {
+            "reachOut": "Contactez-Nous",
+            "email": "Email",
+            "phone": "Téléphone",
+            "location": "Localisation",
+            "locationValue": "Casablanca, Maroc"
+        }
+    },
+    "footer": {
+        "description": "Agence digitale premium connectant la région MENA avec l'économie numérique mondiale.",
+        "services": "Services",
+        "company": "Entreprise",
+        "privacy": "Politique de Confidentialité",
+        "terms": "Conditions d'Utilisation",
+        "copyright": "Tous droits réservés."
+    },
+    "privacy": {
+        "title": "Politique de Confidentialité",
+        "lastUpdated": "Dernière mise à jour",
+        "sections": {
+            "intro": {
+                "title": "Introduction",
+                "content": "Chez Maghrib.Digital, nous prenons votre vie privée au sérieux. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations personnelles."
+            },
+            "collection": {
+                "title": "Informations Collectées",
+                "content": "Nous collectons les informations que vous nous fournissez directement, telles que votre nom, email et détails du projet lorsque vous nous contactez."
+            },
+            "usage": {
+                "title": "Utilisation des Informations",
+                "content": "Nous utilisons vos informations pour fournir nos services, communiquer avec vous et améliorer nos offres."
+            },
+            "protection": {
+                "title": "Protection des Données",
+                "content": "Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos informations personnelles."
+            },
+            "contact": {
+                "title": "Nous Contacter",
+                "content": "Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter à privacy@maghrib.digital."
+            }
+        }
+    },
+    "terms": {
+        "title": "Conditions d'Utilisation",
+        "lastUpdated": "Dernière mise à jour",
+        "sections": {
+            "acceptance": {
+                "title": "Acceptation des Conditions",
+                "content": "En accédant et utilisant les services de Maghrib.Digital, vous acceptez d'être lié par ces conditions d'utilisation."
+            },
+            "services": {
+                "title": "Nos Services",
+                "content": "Maghrib.Digital fournit des services de développement web, création de LLC et gestion des réseaux sociaux."
+            },
+            "ip": {
+                "title": "Propriété Intellectuelle",
+                "content": "Tout le contenu et les matériaux sur ce site sont la propriété de Maghrib.Digital et sont protégés par les lois sur la propriété intellectuelle."
+            },
+            "liability": {
+                "title": "Limitation de Responsabilité",
+                "content": "Maghrib.Digital n'est pas responsable des dommages indirects, accessoires ou consécutifs résultant de l'utilisation de nos services."
+            },
+            "contact": {
+                "title": "Nous Contacter",
+                "content": "Pour toute question concernant ces conditions, veuillez nous contacter à legal@maghrib.digital."
+            }
+        }
+    }
+}

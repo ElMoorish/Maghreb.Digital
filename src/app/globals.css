@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   Maghrib.Digital — Minimalist Moroccan Luxury
+   ============================================ */
+
+:root {
+    /* Brand Colors - The Creamy Palette */
+    --maghrib-cream: #FDFBF7;
+    --maghrib-beige: #F2E8DA;
+    --maghrib-terracotta: #CCA483;
+    --maghrib-gold: #D4AF37;
+    --maghrib-charcoal: #3E3935;
+    --maghrib-taupe: #7F766F;
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--maghrib-cream);
+    color: var(--maghrib-charcoal);
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Arabic RTL Support */
+[dir="rtl"] {
+    font-family: var(--font-arabic), var(--font-montserrat), system-ui, sans-serif;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+    font-family: var(--font-arabic), var(--font-playfair), Georgia, serif;
+}
+
+/* Selection */
+::selection {
+    background: var(--maghrib-terracotta);
+    color: var(--maghrib-cream);
+}
+
+/* Scrollbar - Refined */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--maghrib-beige);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--maghrib-taupe);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--maghrib-terracotta);
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-playfair), Georgia, serif;
+    color: var(--maghrib-charcoal);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+/* ============================================
+   Elegant Components
+   ============================================ */
+
+/* Warm Card */
+.warm-card {
+    background: var(--maghrib-cream);
+    border: 1px solid rgba(204, 164, 131, 0.2);
+    border-radius: 4px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.warm-card:hover {
+    border-color: var(--maghrib-gold);
+    box-shadow: 0 8px 40px -8px rgba(204, 164, 131, 0.25);
+}
+
+/* Beige Card */
+.beige-card {
+    background: var(--maghrib-beige);
+    border: 1px solid rgba(127, 118, 111, 0.15);
+    border-radius: 4px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   Subtle Zellige Pattern
+   ============================================ */
+.zellige-pattern {
+    position: relative;
+}
+
+.zellige-pattern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0L80 40L40 80L0 40L40 0z' fill='none' stroke='%23CCA483' stroke-width='0.5'/%3E%3Cpath d='M40 20L60 40L40 60L20 40L40 20z' fill='none' stroke='%23CCA483' stroke-width='0.5'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23D4AF37' stroke-width='0.5'/%3E%3C/svg%3E");
+    background-size: 80px 80px;
+    pointer-events: none;
+}
+
+/* More visible pattern for featured areas */
+.zellige-pattern-visible::before {
+    opacity: 0.06;
+}
+
+/* ============================================
+   Decorative Elements
+   ============================================ */
+
+/* Moroccan Divider */
+.moroccan-divider {
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            var(--maghrib-gold) 20%,
+            var(--maghrib-gold) 80%,
+            transparent 100%);
+    opacity: 0.4;
+}
+
+/* Gold Accent Border */
+.gold-border-top {
+    border-top: 1px solid var(--maghrib-gold);
+}
+
+.gold-border-bottom {
+    border-bottom: 1px solid var(--maghrib-gold);
+}
+
+/* ============================================
+   Button Styles
+   ============================================ */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--maghrib-terracotta);
+    color: var(--maghrib-cream);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover {
+    background: var(--maghrib-charcoal);
+    box-shadow: 0 4px 20px -2px rgba(62, 57, 53, 0.3);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: var(--maghrib-charcoal);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    border: 1px solid var(--maghrib-charcoal);
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary:hover {
+    background: var(--maghrib-charcoal);
+    color: var(--maghrib-cream);
+}
+
+/* ============================================
+   Organic Texture Overlay
+   ============================================ */
+.texture-overlay {
+    position: relative;
+}
+
+.texture-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.015;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+/* ============================================
+   Section Styles
+   ============================================ */
+.section-cream {
+    background-color: var(--maghrib-cream);
+}
+
+.section-beige {
+    background-color: var(--maghrib-beige);
+}
+
+/* ============================================
+   Refined Animations
+   ============================================ */
+@keyframes gentleFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes gentleRise {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-gentle-fade {
+    animation: gentleFade 1.2s ease-out forwards;
+}
+
+.animate-gentle-rise {
+    animation: gentleRise 1s ease-out forwards;
+}
