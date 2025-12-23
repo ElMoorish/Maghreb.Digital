@@ -1,5 +1,5 @@
 import { getDictionary } from "@/i18n/getDictionary";
-import type { Locale } from "@/i18n/config";
+import { locales, defaultLocale, type Locale } from "@/i18n/config";
 import Link from "next/link";
 import { ArrowLeft, Code2, Check } from "lucide-react";
 
@@ -23,9 +23,10 @@ const deliverables = [
 export default async function WebDevelopmentPage({
     params,
 }: {
-    params: Promise<{ locale: Locale }>;
+    params: Promise<{ locale: string }>;
 }) {
-    const { locale } = await params;
+    const { locale: localeParam } = await params;
+    const locale = (locales.includes(localeParam as Locale) ? localeParam : defaultLocale) as Locale;
     const t = await getDictionary(locale);
     const service = t.services.items.web;
 

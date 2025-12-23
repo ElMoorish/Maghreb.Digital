@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LayoutClient } from "@/components/layout/LayoutClient";
-import { locales, isRTL, type Locale } from "@/i18n/config";
+import { locales, isRTL, defaultLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/getDictionary";
 import { DictionaryProvider } from "@/components/providers/DictionaryProvider";
 
@@ -11,9 +11,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
     params,
 }: {
-    params: Promise<{ locale: Locale }>;
+    params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-    const { locale } = await params;
+    const { locale: localeParam } = await params;
+    const locale = (locales.includes(localeParam as Locale) ? localeParam : defaultLocale) as Locale;
     const dict = await getDictionary(locale);
 
     const titles: Record<Locale, string> = {
@@ -53,9 +54,10 @@ export default async function LocaleLayout({
     params,
 }: Readonly<{
     children: React.ReactNode;
-    params: Promise<{ locale: Locale }>;
+    params: Promise<{ locale: string }>;
 }>) {
-    const { locale } = await params;
+    const { locale: localeParam } = await params;
+    const locale = (locales.includes(localeParam as Locale) ? localeParam : defaultLocale) as Locale;
     const dictionary = await getDictionary(locale);
     const rtl = isRTL(locale);
 
@@ -67,3 +69,4 @@ export default async function LocaleLayout({
         </div>
     );
 }
+
