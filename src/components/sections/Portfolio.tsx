@@ -3,45 +3,23 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { useDictionary } from "@/components/providers/DictionaryProvider";
 
-const projects = [
-    {
-        id: 1,
-        title: "Riad Luxe Collection",
-        category: "Hospitality",
-        description: "Luxury hospitality booking platform with immersive room tours",
-        year: "2025",
-        image: "/portfolio/riad-luxe.png",
-    },
-    {
-        id: 2,
-        title: "Atlas FinTech",
-        category: "Financial Services",
-        description: "Mobile banking solution for the modern MENA market",
-        year: "2025",
-        image: "/portfolio/atlas-fintech.png",
-    },
-    {
-        id: 3,
-        title: "Medina Crafts",
-        category: "E-Commerce",
-        description: "Artisan marketplace connecting craftsmen globally",
-        year: "2025",
-        image: "/portfolio/medina-crafts.png",
-    },
-    {
-        id: 4,
-        title: "Sahara Ventures",
-        category: "Corporate",
-        description: "Investment firm digital presence and deal flow platform",
-        year: "2025",
-        image: "/portfolio/sahara-ventures.png",
-    },
-];
+interface PortfolioItem {
+    id: number;
+    title: string;
+    category: string;
+    description: string;
+    year: string;
+    image: string;
+}
 
 export function Portfolio() {
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+    const { dictionary: t } = useDictionary();
+
+    const items = t.portfolio.items as PortfolioItem[];
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -82,14 +60,13 @@ export function Portfolio() {
                 >
                     <div className="w-12 h-px bg-maghrib-gold mx-auto mb-8" />
                     <p className="font-body text-sm tracking-[0.3em] uppercase text-maghrib-taupe mb-4">
-                        Our Work
+                        {t.portfolio.tagline}
                     </p>
                     <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-maghrib-charcoal mb-6">
-                        Selected Projects
+                        {t.portfolio.headline}
                     </h2>
                     <p className="max-w-2xl mx-auto text-lg text-maghrib-taupe font-light">
-                        A curated collection of our finest work — each project a testament
-                        to our commitment to excellence and attention to detail.
+                        {t.portfolio.subheadline}
                     </p>
                 </motion.div>
 
@@ -100,7 +77,7 @@ export function Portfolio() {
                     animate={isInView ? "visible" : "hidden"}
                     className="grid grid-cols-1 md:grid-cols-2 gap-8"
                 >
-                    {projects.map((project) => (
+                    {items.map((project) => (
                         <motion.div
                             key={project.id}
                             variants={itemVariants}

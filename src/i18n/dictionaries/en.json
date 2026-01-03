@@ -254,8 +254,51 @@
     "portfolio": {
         "tagline": "Selected Works",
         "headline": "Case Studies",
+        "subheadline": "A curated collection of our finest work — each project a testament to our commitment to excellence.",
         "viewProject": "View Project",
-        "viewAll": "View All Work"
+        "viewAll": "View All Work",
+        "items": [
+            {
+                "id": 1,
+                "title": "Zerogambit Chess",
+                "category": "SaaS Platform",
+                "description": "Real-time multiplayer chess platform with AI analysis",
+                "year": "2025",
+                "image": "/portfolio/zerogambit.png"
+            },
+            {
+                "id": 2,
+                "title": "Riad Luxe Collection",
+                "category": "Hospitality",
+                "description": "Luxury hospitality booking platform with immersive room tours",
+                "year": "2025",
+                "image": "/portfolio/riad-luxe.png"
+            },
+            {
+                "id": 3,
+                "title": "Atlas FinTech",
+                "category": "Financial Services",
+                "description": "Mobile banking solution for the modern MENA market",
+                "year": "2025",
+                "image": "/portfolio/atlas-fintech.png"
+            },
+            {
+                "id": 4,
+                "title": "Medina Crafts",
+                "category": "E-Commerce",
+                "description": "Artisan marketplace connecting craftsmen globally",
+                "year": "2025",
+                "image": "/portfolio/medina-crafts.png"
+            },
+            {
+                "id": 5,
+                "title": "Sahara Ventures",
+                "category": "Corporate",
+                "description": "Investment firm digital presence and deal flow platform",
+                "year": "2025",
+                "image": "/portfolio/sahara-ventures.png"
+            }
+        ]
     },
     "about": {
         "tagline": "Our Story",

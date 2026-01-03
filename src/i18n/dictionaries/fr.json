@@ -254,8 +254,51 @@
     "portfolio": {
         "tagline": "Travaux Sélectionnés",
         "headline": "Études de Cas",
-        "viewProject": "Voir le Projet",
-        "viewAll": "Voir Tous les Travaux"
+        "subheadline": "Une collection de nos meilleures réalisations — chaque projet témoignant de notre engagement envers l'excellence.",
+        "viewProject": "View Project",
+        "viewAll": "Voir Tous les Projets",
+        "items": [
+            {
+                "id": 1,
+                "title": "Zerogambit Chess",
+                "category": "Plateforme SaaS",
+                "description": "Plateforme d'échecs multijoueur en temps réel avec analyse IA",
+                "year": "2025",
+                "image": "/portfolio/zerogambit.png"
+            },
+            {
+                "id": 2,
+                "title": "Riad Luxe Collection",
+                "category": "Hôtellerie",
+                "description": "Plateforme de réservation de luxe avec visites immersives",
+                "year": "2025",
+                "image": "/portfolio/riad-luxe.png"
+            },
+            {
+                "id": 3,
+                "title": "Atlas FinTech",
+                "category": "Services Financiers",
+                "description": "Solution bancaire mobile pour le marché MENA moderne",
+                "year": "2025",
+                "image": "/portfolio/atlas-fintech.png"
+            },
+            {
+                "id": 4,
+                "title": "Medina Crafts",
+                "category": "E-Commerce",
+                "description": "Marketplace artisanal connectant les créateurs au monde",
+                "year": "2025",
+                "image": "/portfolio/medina-crafts.png"
+            },
+            {
+                "id": 5,
+                "title": "Sahara Ventures",
+                "category": "Corporatif",
+                "description": "Présence numérique et plateforme de gestion pour société d'investissement",
+                "year": "2025",
+                "image": "/portfolio/sahara-ventures.png"
+            }
+        ]
     },
     "about": {
         "tagline": "Notre Histoire",
