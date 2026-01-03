@@ -1,23 +1,11 @@
 import { getDictionary } from "@/i18n/getDictionary";
 import { locales, defaultLocale, type Locale } from "@/i18n/config";
 import Link from "next/link";
-import { ArrowLeft, Globe2, Building2, CreditCard, Shield, Check, FileText, Landmark, Mail, Calendar } from "lucide-react";
+import { ArrowLeft, Globe2, Building2, Check, FileText, Mail } from "lucide-react";
+import { CreditCard, Landmark, Calendar } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
-const premiumFeatures = [
-    { icon: CreditCard, title: "Stripe-Ready Guarantee", desc: "Structured to ensure compliance matches Stripe's requirements" },
-    { icon: Landmark, title: "FinTech Banking Setup", desc: "Mercury, Brex, or Relay accounts for non-US residents" },
-    { icon: FileText, title: "Custom Operating Agreement", desc: "Tailored for digital agencies to protect intellectual property" },
-    { icon: Mail, title: "Virtual Office & Mail Scanning", desc: "Real street address with scanned mail delivery" },
-    { icon: Calendar, title: "Compliance Dashboard", desc: "Automated alerts for Annual Reports and Franchise Tax" },
-];
-
-const deliverables = [
-    "Delaware/Wyoming LLC Filing",
-    "EIN Tax ID (Express Service)",
-    "US Business Bank Resolution",
-    "Stripe Verification Support",
-    "Digital Operating Agreement",
-];
+const featureIcons: LucideIcon[] = [CreditCard, Landmark, FileText, Mail, Calendar];
 
 export default async function LLCFormationPage({
     params,
@@ -28,6 +16,8 @@ export default async function LLCFormationPage({
     const locale = (locales.includes(localeParam as Locale) ? localeParam : defaultLocale) as Locale;
     const t = await getDictionary(locale);
     const service = t.services.items.llc;
+    const p = t.services.pages;
+    const llcPage = p.llc;
 
     return (
         <div className="min-h-screen bg-maghrib-cream">
@@ -39,7 +29,7 @@ export default async function LLCFormationPage({
                         className="inline-flex items-center gap-2 text-maghrib-taupe hover:text-maghrib-terracotta transition-colors mb-8"
                     >
                         <ArrowLeft className="w-4 h-4 rtl:rotate-180" />
-                        <span>Back to Services</span>
+                        <span>{p.backToServices}</span>
                     </Link>
 
                     <div className="w-16 h-16 rounded-sm bg-maghrib-cream border border-maghrib-taupe/20 flex items-center justify-center mb-8">
@@ -63,43 +53,46 @@ export default async function LLCFormationPage({
                 <div className="max-w-4xl mx-auto px-6 lg:px-12">
                     <div className="w-12 h-px bg-maghrib-gold mb-8" />
                     <h2 className="font-heading text-3xl text-maghrib-charcoal mb-4">
-                        Standard Package Includes
+                        {llcPage.standardPackage}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                         <div className="p-6 bg-maghrib-beige rounded-sm text-center">
                             <Building2 className="w-8 h-8 text-maghrib-terracotta mx-auto mb-3" />
-                            <h3 className="font-medium text-maghrib-charcoal mb-2">Company Formation</h3>
-                            <p className="text-sm text-maghrib-taupe">Filing Articles of Organization</p>
+                            <h3 className="font-medium text-maghrib-charcoal mb-2">{llcPage.companyFormation}</h3>
+                            <p className="text-sm text-maghrib-taupe">{llcPage.companyFormationDesc}</p>
                         </div>
                         <div className="p-6 bg-maghrib-beige rounded-sm text-center">
                             <Mail className="w-8 h-8 text-maghrib-terracotta mx-auto mb-3" />
-                            <h3 className="font-medium text-maghrib-charcoal mb-2">Registered Agent</h3>
-                            <p className="text-sm text-maghrib-taupe">US/UK address for legal mail</p>
+                            <h3 className="font-medium text-maghrib-charcoal mb-2">{llcPage.registeredAgent}</h3>
+                            <p className="text-sm text-maghrib-taupe">{llcPage.registeredAgentDesc}</p>
                         </div>
                         <div className="p-6 bg-maghrib-beige rounded-sm text-center">
                             <FileText className="w-8 h-8 text-maghrib-terracotta mx-auto mb-3" />
-                            <h3 className="font-medium text-maghrib-charcoal mb-2">EIN Acquisition</h3>
-                            <p className="text-sm text-maghrib-taupe">Tax ID from the IRS</p>
+                            <h3 className="font-medium text-maghrib-charcoal mb-2">{llcPage.einAcquisition}</h3>
+                            <p className="text-sm text-maghrib-taupe">{llcPage.einAcquisitionDesc}</p>
                         </div>
                     </div>
 
                     <h2 className="font-heading text-3xl text-maghrib-charcoal mb-4">
-                        The Maghrib.Digital Edge
+                        {p.edge}
                     </h2>
                     <p className="text-maghrib-taupe mb-12">
-                        Premium features designed for MENA entrepreneurs going global.
+                        {p.edgeDesc}
                     </p>
 
                     <div className="space-y-6">
-                        {premiumFeatures.map((feature, idx) => (
-                            <div key={idx} className="flex items-start gap-4 p-6 bg-maghrib-beige rounded-sm">
-                                <feature.icon className="w-6 h-6 text-maghrib-terracotta flex-shrink-0" />
-                                <div>
-                                    <h3 className="font-medium text-maghrib-charcoal mb-1">{feature.title}</h3>
-                                    <p className="text-sm text-maghrib-taupe">{feature.desc}</p>
+                        {llcPage.premiumFeatures.map((feature: { title: string; desc: string }, idx: number) => {
+                            const FeatureIcon = featureIcons[idx] || Check;
+                            return (
+                                <div key={idx} className="flex items-start gap-4 p-6 bg-maghrib-beige rounded-sm">
+                                    <FeatureIcon className="w-6 h-6 text-maghrib-terracotta flex-shrink-0" />
+                                    <div>
+                                        <h3 className="font-medium text-maghrib-charcoal mb-1">{feature.title}</h3>
+                                        <p className="text-sm text-maghrib-taupe">{feature.desc}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -108,10 +101,10 @@ export default async function LLCFormationPage({
             <section className="py-20 bg-maghrib-beige">
                 <div className="max-w-4xl mx-auto px-6 lg:px-12">
                     <h2 className="font-heading text-3xl text-maghrib-charcoal mb-8">
-                        Deliverables
+                        {p.deliverables}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {deliverables.map((item, idx) => (
+                        {llcPage.deliverables.map((item: string, idx: number) => (
                             <div key={idx} className="flex items-center gap-3 p-4 bg-maghrib-cream rounded-sm border border-maghrib-taupe/10">
                                 <Check className="w-4 h-4 text-maghrib-gold" />
                                 <span className="text-sm text-maghrib-charcoal">{item}</span>
@@ -126,39 +119,40 @@ export default async function LLCFormationPage({
                 <div className="max-w-5xl mx-auto px-6 lg:px-12">
                     <div className="text-center mb-12">
                         <h2 className="font-heading text-3xl text-maghrib-charcoal mb-4">
-                            Pricing Packages
+                            {p.pricingPackages}
                         </h2>
-                        <p className="text-maghrib-taupe">Choose the level that fits your needs</p>
+                        <p className="text-maghrib-taupe">{p.pricingDesc}</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                         {/* Growth */}
                         <div className="p-8 bg-maghrib-cream border border-maghrib-taupe/20 rounded-sm">
-                            <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">Growth</h3>
-                            <p className="text-3xl font-heading text-maghrib-terracotta mb-4">1 799 MAD</p>
-                            <p className="text-sm text-maghrib-taupe mb-6">Pour les entrepreneurs débutants</p>
+                            <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">{llcPage.growth}</h3>
+                            <p className="text-3xl font-heading text-maghrib-terracotta mb-4">{llcPage.growthPrice}</p>
+                            <p className="text-sm text-maghrib-taupe mb-6">{llcPage.growthDesc}</p>
                             <ul className="space-y-3 text-sm text-maghrib-taupe">
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> LLC Formation + EIN</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Registered Agent (1 an)</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Operating Agreement</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Support Stripe Verification</li>
+                                {llcPage.growthFeatures.map((feature: string, idx: number) => (
+                                    <li key={idx} className="flex items-center gap-2">
+                                        <Check className="w-4 h-4 text-maghrib-gold" /> {feature}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
                         {/* Full Service */}
                         <div className="p-8 bg-maghrib-charcoal text-maghrib-cream border-2 border-maghrib-gold rounded-sm relative">
                             <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-maghrib-gold text-maghrib-charcoal text-xs font-medium tracking-wider uppercase rounded-sm">
-                                Full Service
+                                {llcPage.fullService}
                             </div>
-                            <h3 className="font-heading text-xl mb-2">Full Service</h3>
-                            <p className="text-3xl font-heading text-maghrib-gold mb-4">3 500 MAD</p>
-                            <p className="text-sm text-maghrib-cream/70 mb-6">Infrastructure business complète</p>
+                            <h3 className="font-heading text-xl mb-2">{llcPage.fullService}</h3>
+                            <p className="text-3xl font-heading text-maghrib-gold mb-4">{llcPage.fullServicePrice}</p>
+                            <p className="text-sm text-maghrib-cream/70 mb-6">{llcPage.fullServiceDesc}</p>
                             <ul className="space-y-3 text-sm text-maghrib-cream/80">
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Tout le plan Growth</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Configuration FinTech Banking</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Virtual Office + Mail Scanning</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Compliance Dashboard</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Consultation Stratégie Fiscale</li>
+                                {llcPage.fullServiceFeatures.map((feature: string, idx: number) => (
+                                    <li key={idx} className="flex items-center gap-2">
+                                        <Check className="w-4 h-4 text-maghrib-gold" /> {feature}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -169,7 +163,7 @@ export default async function LLCFormationPage({
             <section className="py-20 bg-maghrib-beige">
                 <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
                     <h2 className="font-heading text-3xl text-maghrib-charcoal mb-6">
-                        Ready to Go Global?
+                        {p.readyToGrow}
                     </h2>
                     <Link href={`/${locale}#contact`} className="btn-primary">
                         {t.nav.getStarted}

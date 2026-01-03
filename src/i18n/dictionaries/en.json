@@ -60,6 +60,195 @@
                     "Storytelling"
                 ]
             }
+        },
+        "pages": {
+            "backToServices": "Back to Services",
+            "edge": "The Maghrib.Digital Edge",
+            "edgeDesc": "What sets us apart from standard agencies.",
+            "deliverables": "Deliverables",
+            "pricingPackages": "Pricing Packages",
+            "pricingDesc": "Choose the solution that fits your needs",
+            "readyToBuild": "Ready to Build Your Digital Presence?",
+            "readyToGrow": "Ready to Go Global?",
+            "web": {
+                "premiumFeatures": [
+                    "Next.js 16 Architecture — Instant loading with Server-Side Rendering",
+                    "Headless CMS Integration — Custom dashboard for easy content updates",
+                    "Multi-Language Support (i18n) — French and English",
+                    "3D Product Interaction — Rotating products with Framer Motion",
+                    "Conversion Rate Optimization — Exit-intent popups, sticky CTAs",
+                    "Technical SEO Audit — Speed Index Score > 90"
+                ],
+                "deliverables": [
+                    "Custom Next.js Frontend",
+                    "Headless CMS Dashboard",
+                    "Technical SEO Audit",
+                    "Speed Index Score > 90",
+                    "Multi-Language Localization"
+                ],
+                "websiteCreation": "Website Creation",
+                "websiteCreationDesc": "Shopify · WordPress · Youcan",
+                "fullDevCode": "Full Dev Code",
+                "fullDevCodeDesc": "Custom development with Next.js",
+                "vitrine": "Vitrine",
+                "vitrineDesc": "Professional showcase site",
+                "vitrinePrice": "From 1,600 MAD",
+                "vitrineDevPrice": "From 5,000 MAD",
+                "ecommerce": "E-Commerce",
+                "ecommerceDesc": "Complete online store",
+                "ecommercePrice": "From 3,400 MAD",
+                "ecommerceCrm": "E-Commerce + CRM",
+                "ecommerceCrmDesc": "CRM + Website Development",
+                "ecommerceCrmPrice": "10,000 MAD",
+                "fullPackage": "Full Package",
+                "fullPackageDesc": "Complete solution",
+                "fullPackagePrice": "From 7,500 MAD",
+                "fullPackageDevPrice": "100,000 MAD",
+                "features": {
+                    "responsive": "Responsive design",
+                    "essentialPages": "Essential pages",
+                    "basicSeo": "Basic SEO",
+                    "productCatalog": "Product catalog",
+                    "onlinePayment": "Online payment",
+                    "orderManagement": "Order management",
+                    "fullConception": "Complete conception",
+                    "socialIncluded": "Social media included",
+                    "hostingIncluded": "Hosting included",
+                    "nextjsArch": "Next.js Architecture",
+                    "seoOptimized": "Optimized SEO",
+                    "headlessCms": "Headless CMS",
+                    "ecommerceIntegrated": "Integrated E-Commerce",
+                    "customDashboard": "Custom dashboard",
+                    "premiumHosting": "Premium hosting"
+                },
+                "popular": "Popular",
+                "recommended": "Recommended"
+            },
+            "llc": {
+                "standardPackage": "Standard Package Includes",
+                "companyFormation": "Company Formation",
+                "companyFormationDesc": "Filing Articles of Organization",
+                "registeredAgent": "Registered Agent",
+                "registeredAgentDesc": "US address for legal mail",
+                "einAcquisition": "EIN Acquisition",
+                "einAcquisitionDesc": "Tax ID from the IRS",
+                "premiumFeatures": [
+                    {
+                        "title": "Stripe-Ready Guarantee",
+                        "desc": "Structured to ensure compliance matches Stripe's requirements"
+                    },
+                    {
+                        "title": "FinTech Banking Setup",
+                        "desc": "Mercury, Brex, or Relay accounts for non-US residents"
+                    },
+                    {
+                        "title": "Custom Operating Agreement",
+                        "desc": "Tailored for digital agencies to protect intellectual property"
+                    },
+                    {
+                        "title": "Virtual Office & Mail Scanning",
+                        "desc": "Real street address with scanned mail delivery"
+                    },
+                    {
+                        "title": "Compliance Dashboard",
+                        "desc": "Automated alerts for Annual Reports and Franchise Tax"
+                    }
+                ],
+                "deliverables": [
+                    "Delaware/Wyoming LLC Filing",
+                    "EIN Tax ID (Express Service)",
+                    "US Business Bank Resolution",
+                    "Stripe Verification Support",
+                    "Digital Operating Agreement"
+                ],
+                "growth": "Growth",
+                "growthPrice": "1,799 MAD",
+                "growthDesc": "For starting entrepreneurs",
+                "growthFeatures": [
+                    "LLC Formation + EIN",
+                    "Registered Agent (1 year)",
+                    "Operating Agreement",
+                    "Stripe Verification Support"
+                ],
+                "fullService": "Full Service",
+                "fullServicePrice": "3,500 MAD",
+                "fullServiceDesc": "Complete business infrastructure",
+                "fullServiceFeatures": [
+                    "Everything in Growth",
+                    "FinTech Banking Setup",
+                    "Virtual Office + Mail Scanning",
+                    "Compliance Dashboard",
+                    "Tax Strategy Consultation"
+                ]
+            },
+            "social": {
+                "premiumFeatures": [
+                    {
+                        "title": "Trilingual Content",
+                        "desc": "Native speakers in Darija, French, and English"
+                    },
+                    {
+                        "title": "Community Management",
+                        "desc": "Daily engagement and response handling"
+                    },
+                    {
+                        "title": "Content Strategy",
+                        "desc": "Monthly content calendars and storytelling"
+                    },
+                    {
+                        "title": "Analytics & Reporting",
+                        "desc": "Weekly performance insights"
+                    },
+                    {
+                        "title": "Crisis Management",
+                        "desc": "Reputation protection protocols"
+                    }
+                ],
+                "deliverables": [
+                    "Monthly Content Calendar",
+                    "Community Management",
+                    "Performance Reports",
+                    "Engagement Strategy",
+                    "Brand Voice Guidelines"
+                ],
+                "standardPackage": "Standard Package Includes",
+                "contentCalendar": "Content Calendar",
+                "contentCalendarDesc": "Monthly planning & scheduling",
+                "graphicDesign": "Graphic Design",
+                "graphicDesignDesc": "Instagram/LinkedIn layouts",
+                "scheduling": "Scheduling",
+                "schedulingDesc": "Posts go live on time",
+                "edgeDesc": "Human-led social strategy with cultural nuance — not AI-generated content.",
+                "readyToElevate": "Ready to Elevate Your Social Presence?",
+                "pricingNote": "Level of involvement, not number of posts",
+                "presence": "Presence",
+                "presencePrice": "8,000 MAD",
+                "perMonth": "/month",
+                "presenceFeatures": [
+                    "12 Posts/month",
+                    "Static Designs + Captions",
+                    "Content Calendar"
+                ],
+                "noCommunity": "No Community Mgmt",
+                "engagement": "Engagement",
+                "engagementPrice": "18,000 MAD",
+                "engagementFeatures": [
+                    "8 Reels + 8 Posts/month",
+                    "Daily Story Management",
+                    "Community Mgmt (Replies)",
+                    "Bi-Weekly Strategy Calls"
+                ],
+                "dominance": "Dominance",
+                "dominancePrice": "35,000 MAD",
+                "dominanceFeatures": [
+                    "Daily Content (30/mo)",
+                    "Full Video Production",
+                    "Dedicated Account Manager",
+                    "Crisis Management",
+                    "Monthly ROI Report"
+                ],
+                "mostPopular": "Most Popular"
+            }
         }
     },
     "portfolio": {

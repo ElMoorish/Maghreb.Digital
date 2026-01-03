@@ -1,23 +1,10 @@
 import { getDictionary } from "@/i18n/getDictionary";
 import { locales, defaultLocale, type Locale } from "@/i18n/config";
 import Link from "next/link";
-import { ArrowLeft, Users, Languages, MessageSquare, Heart, Sparkles, Check, Calendar, Video, BarChart3, Shield, Palette } from "lucide-react";
+import { ArrowLeft, Users, Languages, MessageSquare, Sparkles, Check, Calendar, Video, BarChart3, Shield } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
-const premiumFeatures = [
-    { icon: Languages, title: "Cultural & Linguistic Nuance", desc: "Deep understanding of the Maghreb Code — Darija, French, and English that resonates with local buyers" },
-    { icon: MessageSquare, title: "Active Community Management", desc: "Real humans reply to comments and DMs, nurturing leads until they're ready to buy" },
-    { icon: Sparkles, title: "Trend Adaptation", desc: "Creative adaptation of trends to your brand voice within 24 hours" },
-    { icon: Video, title: "Visual Storytelling", desc: "Carousels and reels that tell a cohesive story about your brand's values and mission" },
-    { icon: Shield, title: "Crisis Management", desc: "Immediate alerts and strategic responses to negative comments or PR issues" },
-];
-
-const deliverables = [
-    "Dedicated Account Manager",
-    "Bi-Weekly Strategy Calls",
-    "Manual Community Engagement (1hr/day)",
-    "Custom Video Editing (Premiere Pro/CapCut)",
-    "Monthly ROI & Sentiment Report",
-];
+const featureIcons: LucideIcon[] = [Languages, MessageSquare, Sparkles, BarChart3, Shield];
 
 export default async function SocialMediaPage({
     params,
@@ -28,6 +15,8 @@ export default async function SocialMediaPage({
     const locale = (locales.includes(localeParam as Locale) ? localeParam : defaultLocale) as Locale;
     const t = await getDictionary(locale);
     const service = t.services.items.social;
+    const p = t.services.pages;
+    const socialPage = p.social;
 
     return (
         <div className="min-h-screen bg-maghrib-cream">
@@ -39,7 +28,7 @@ export default async function SocialMediaPage({
                         className="inline-flex items-center gap-2 text-maghrib-taupe hover:text-maghrib-terracotta transition-colors mb-8"
                     >
                         <ArrowLeft className="w-4 h-4 rtl:rotate-180" />
-                        <span>Back to Services</span>
+                        <span>{p.backToServices}</span>
                     </Link>
 
                     <div className="w-16 h-16 rounded-sm bg-maghrib-cream border border-maghrib-taupe/20 flex items-center justify-center mb-6">
@@ -69,43 +58,46 @@ export default async function SocialMediaPage({
                 <div className="max-w-4xl mx-auto px-6 lg:px-12">
                     <div className="w-12 h-px bg-maghrib-gold mb-8" />
                     <h2 className="font-heading text-3xl text-maghrib-charcoal mb-4">
-                        Standard Package Includes
+                        {socialPage.standardPackage}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                         <div className="p-6 bg-maghrib-beige rounded-sm text-center">
                             <Calendar className="w-8 h-8 text-maghrib-terracotta mx-auto mb-3" />
-                            <h3 className="font-medium text-maghrib-charcoal mb-2">Content Calendar</h3>
-                            <p className="text-sm text-maghrib-taupe">Monthly planning & scheduling</p>
+                            <h3 className="font-medium text-maghrib-charcoal mb-2">{socialPage.contentCalendar}</h3>
+                            <p className="text-sm text-maghrib-taupe">{socialPage.contentCalendarDesc}</p>
                         </div>
                         <div className="p-6 bg-maghrib-beige rounded-sm text-center">
-                            <Palette className="w-8 h-8 text-maghrib-terracotta mx-auto mb-3" />
-                            <h3 className="font-medium text-maghrib-charcoal mb-2">Graphic Design</h3>
-                            <p className="text-sm text-maghrib-taupe">Instagram/LinkedIn layouts</p>
+                            <Video className="w-8 h-8 text-maghrib-terracotta mx-auto mb-3" />
+                            <h3 className="font-medium text-maghrib-charcoal mb-2">{socialPage.graphicDesign}</h3>
+                            <p className="text-sm text-maghrib-taupe">{socialPage.graphicDesignDesc}</p>
                         </div>
                         <div className="p-6 bg-maghrib-beige rounded-sm text-center">
                             <BarChart3 className="w-8 h-8 text-maghrib-terracotta mx-auto mb-3" />
-                            <h3 className="font-medium text-maghrib-charcoal mb-2">Scheduling</h3>
-                            <p className="text-sm text-maghrib-taupe">Posts go live on time</p>
+                            <h3 className="font-medium text-maghrib-charcoal mb-2">{socialPage.scheduling}</h3>
+                            <p className="text-sm text-maghrib-taupe">{socialPage.schedulingDesc}</p>
                         </div>
                     </div>
 
                     <h2 className="font-heading text-3xl text-maghrib-charcoal mb-4">
-                        The Maghrib.Digital Edge
+                        {p.edge}
                     </h2>
                     <p className="text-maghrib-taupe mb-12">
-                        Human-led social strategy with cultural nuance — not AI-generated content.
+                        {socialPage.edgeDesc}
                     </p>
 
                     <div className="space-y-6">
-                        {premiumFeatures.map((feature, idx) => (
-                            <div key={idx} className="flex items-start gap-4 p-6 bg-maghrib-beige rounded-sm">
-                                <feature.icon className="w-6 h-6 text-maghrib-terracotta flex-shrink-0" />
-                                <div>
-                                    <h3 className="font-medium text-maghrib-charcoal mb-1">{feature.title}</h3>
-                                    <p className="text-sm text-maghrib-taupe">{feature.desc}</p>
+                        {socialPage.premiumFeatures.map((feature: { title: string; desc: string }, idx: number) => {
+                            const FeatureIcon = featureIcons[idx] || Check;
+                            return (
+                                <div key={idx} className="flex items-start gap-4 p-6 bg-maghrib-beige rounded-sm">
+                                    <FeatureIcon className="w-6 h-6 text-maghrib-terracotta flex-shrink-0" />
+                                    <div>
+                                        <h3 className="font-medium text-maghrib-charcoal mb-1">{feature.title}</h3>
+                                        <p className="text-sm text-maghrib-taupe">{feature.desc}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -114,10 +106,10 @@ export default async function SocialMediaPage({
             <section className="py-20 bg-maghrib-beige">
                 <div className="max-w-4xl mx-auto px-6 lg:px-12">
                     <h2 className="font-heading text-3xl text-maghrib-charcoal mb-8">
-                        Deliverables
+                        {p.deliverables}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {deliverables.map((item, idx) => (
+                        {socialPage.deliverables.map((item: string, idx: number) => (
                             <div key={idx} className="flex items-center gap-3 p-4 bg-maghrib-cream rounded-sm border border-maghrib-taupe/10">
                                 <Check className="w-4 h-4 text-maghrib-gold" />
                                 <span className="text-sm text-maghrib-charcoal">{item}</span>
@@ -132,52 +124,57 @@ export default async function SocialMediaPage({
                 <div className="max-w-5xl mx-auto px-6 lg:px-12">
                     <div className="text-center mb-12">
                         <h2 className="font-heading text-3xl text-maghrib-charcoal mb-4">
-                            Pricing Packages
+                            {p.pricingPackages}
                         </h2>
-                        <p className="text-maghrib-taupe">Level of involvement, not number of posts</p>
+                        <p className="text-maghrib-taupe">{socialPage.pricingNote}</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Starter */}
+                        {/* Presence */}
                         <div className="p-8 bg-maghrib-cream border border-maghrib-taupe/20 rounded-sm">
-                            <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">Presence</h3>
-                            <p className="text-3xl font-heading text-maghrib-terracotta mb-1">$800</p>
-                            <p className="text-sm text-maghrib-taupe mb-6">/month</p>
+                            <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">{socialPage.presence}</h3>
+                            <p className="text-3xl font-heading text-maghrib-terracotta mb-1">{socialPage.presencePrice}</p>
+                            <p className="text-sm text-maghrib-taupe mb-6">{socialPage.perMonth}</p>
                             <ul className="space-y-3 text-sm text-maghrib-taupe">
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> 12 Posts/month</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Static Designs + Captions</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Content Calendar</li>
-                                <li className="flex items-center gap-2 text-maghrib-taupe/50"><span className="w-4 h-4">—</span> No Community Mgmt</li>
+                                {socialPage.presenceFeatures.map((feature: string, idx: number) => (
+                                    <li key={idx} className="flex items-center gap-2">
+                                        <Check className="w-4 h-4 text-maghrib-gold" /> {feature}
+                                    </li>
+                                ))}
+                                <li className="flex items-center gap-2 text-maghrib-taupe/50">
+                                    <span className="w-4 h-4">—</span> {socialPage.noCommunity}
+                                </li>
                             </ul>
                         </div>
 
-                        {/* Growth */}
+                        {/* Engagement */}
                         <div className="p-8 bg-maghrib-charcoal text-maghrib-cream border-2 border-maghrib-gold rounded-sm relative">
                             <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-maghrib-gold text-maghrib-charcoal text-xs font-medium tracking-wider uppercase rounded-sm">
-                                Most Popular
+                                {socialPage.mostPopular}
                             </div>
-                            <h3 className="font-heading text-xl mb-2">Engagement</h3>
-                            <p className="text-3xl font-heading text-maghrib-gold mb-1">$1,800</p>
-                            <p className="text-sm text-maghrib-cream/70 mb-6">/month</p>
+                            <h3 className="font-heading text-xl mb-2">{socialPage.engagement}</h3>
+                            <p className="text-3xl font-heading text-maghrib-gold mb-1">{socialPage.engagementPrice}</p>
+                            <p className="text-sm text-maghrib-cream/70 mb-6">{socialPage.perMonth}</p>
                             <ul className="space-y-3 text-sm text-maghrib-cream/80">
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> 8 Reels + 8 Posts/month</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Daily Story Management</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Community Mgmt (Replies)</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Bi-Weekly Strategy Calls</li>
+                                {socialPage.engagementFeatures.map((feature: string, idx: number) => (
+                                    <li key={idx} className="flex items-center gap-2">
+                                        <Check className="w-4 h-4 text-maghrib-gold" /> {feature}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
-                        {/* Empire */}
+                        {/* Dominance */}
                         <div className="p-8 bg-maghrib-cream border border-maghrib-taupe/20 rounded-sm">
-                            <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">Dominance</h3>
-                            <p className="text-3xl font-heading text-maghrib-terracotta mb-1">$3,500</p>
-                            <p className="text-sm text-maghrib-taupe mb-6">/month</p>
+                            <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">{socialPage.dominance}</h3>
+                            <p className="text-3xl font-heading text-maghrib-terracotta mb-1">{socialPage.dominancePrice}</p>
+                            <p className="text-sm text-maghrib-taupe mb-6">{socialPage.perMonth}</p>
                             <ul className="space-y-3 text-sm text-maghrib-taupe">
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Daily Content (30/mo)</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Full Video Production</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Dedicated Account Manager</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Crisis Management</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Monthly ROI Report</li>
+                                {socialPage.dominanceFeatures.map((feature: string, idx: number) => (
+                                    <li key={idx} className="flex items-center gap-2">
+                                        <Check className="w-4 h-4 text-maghrib-gold" /> {feature}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -188,7 +185,7 @@ export default async function SocialMediaPage({
             <section className="py-20 bg-maghrib-beige">
                 <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
                     <h2 className="font-heading text-3xl text-maghrib-charcoal mb-6">
-                        Ready to Elevate Your Social Presence?
+                        {socialPage.readyToElevate}
                     </h2>
                     <Link href={`/${locale}#contact`} className="btn-primary">
                         {t.nav.getStarted}

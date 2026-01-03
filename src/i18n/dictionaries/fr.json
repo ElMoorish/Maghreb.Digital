@@ -60,6 +60,195 @@
                     "Storytelling"
                 ]
             }
+        },
+        "pages": {
+            "backToServices": "Retour aux Services",
+            "edge": "L'Avantage Maghrib.Digital",
+            "edgeDesc": "Ce qui nous distingue des agences standard.",
+            "deliverables": "Livrables",
+            "pricingPackages": "Forfaits Tarifaires",
+            "pricingDesc": "Choisissez la solution adaptée à vos besoins",
+            "readyToBuild": "Prêt à Construire Votre Présence Digitale ?",
+            "readyToGrow": "Prêt à Passer à l'International ?",
+            "web": {
+                "premiumFeatures": [
+                    "Architecture Next.js 16 — Chargement instantané avec Rendu Côté Serveur",
+                    "Intégration CMS Headless — Tableau de bord personnalisé pour mise à jour facile",
+                    "Support Multi-Langue (i18n) — Français et Anglais",
+                    "Interaction Produit 3D — Produits rotatifs avec Framer Motion",
+                    "Optimisation Taux de Conversion — Popups intent-exit, CTAs sticky",
+                    "Audit SEO Technique — Score d'Index Vitesse > 90"
+                ],
+                "deliverables": [
+                    "Frontend Next.js Personnalisé",
+                    "Tableau de bord CMS Headless",
+                    "Audit SEO Technique",
+                    "Score d'Index Vitesse > 90",
+                    "Localisation Multi-Langue"
+                ],
+                "websiteCreation": "Création de Site Web",
+                "websiteCreationDesc": "Shopify · WordPress · Youcan",
+                "fullDevCode": "Full Dev Code",
+                "fullDevCodeDesc": "Développement sur mesure avec Next.js",
+                "vitrine": "Vitrine",
+                "vitrineDesc": "Site vitrine professionnel",
+                "vitrinePrice": "À partir de 1 600 MAD",
+                "vitrineDevPrice": "À partir de 5 000 MAD",
+                "ecommerce": "E-Commerce",
+                "ecommerceDesc": "Boutique en ligne complète",
+                "ecommercePrice": "À partir de 3 400 MAD",
+                "ecommerceCrm": "E-Commerce + CRM",
+                "ecommerceCrmDesc": "CRM + Développement de site",
+                "ecommerceCrmPrice": "10 000 MAD",
+                "fullPackage": "Full Package",
+                "fullPackageDesc": "Solution complète",
+                "fullPackagePrice": "À partir de 7 500 MAD",
+                "fullPackageDevPrice": "100 000 MAD",
+                "features": {
+                    "responsive": "Design responsive",
+                    "essentialPages": "Pages essentielles",
+                    "basicSeo": "SEO de base",
+                    "productCatalog": "Catalogue produits",
+                    "onlinePayment": "Paiement en ligne",
+                    "orderManagement": "Gestion des commandes",
+                    "fullConception": "Conception complète",
+                    "socialIncluded": "Réseaux sociaux inclus",
+                    "hostingIncluded": "Hébergement inclus",
+                    "nextjsArch": "Architecture Next.js",
+                    "seoOptimized": "SEO Optimisé",
+                    "headlessCms": "CMS Headless",
+                    "ecommerceIntegrated": "E-Commerce intégré",
+                    "customDashboard": "Dashboard personnalisé",
+                    "premiumHosting": "Hébergement premium"
+                },
+                "popular": "Populaire",
+                "recommended": "Recommandé"
+            },
+            "llc": {
+                "standardPackage": "Inclus dans le Forfait Standard",
+                "companyFormation": "Création de Société",
+                "companyFormationDesc": "Dépôt des Statuts de l'Entreprise",
+                "registeredAgent": "Agent Enregistré",
+                "registeredAgentDesc": "Adresse US pour courrier légal",
+                "einAcquisition": "Obtention EIN",
+                "einAcquisitionDesc": "Numéro fiscal de l'IRS",
+                "premiumFeatures": [
+                    {
+                        "title": "Garantie Stripe-Ready",
+                        "desc": "Structuré pour assurer la conformité aux exigences Stripe"
+                    },
+                    {
+                        "title": "Configuration FinTech Banking",
+                        "desc": "Comptes Mercury, Brex ou Relay pour non-résidents US"
+                    },
+                    {
+                        "title": "Operating Agreement Personnalisé",
+                        "desc": "Adapté aux agences digitales pour protéger la propriété intellectuelle"
+                    },
+                    {
+                        "title": "Bureau Virtuel & Scanning Courrier",
+                        "desc": "Vraie adresse avec livraison de courrier scanné"
+                    },
+                    {
+                        "title": "Dashboard de Conformité",
+                        "desc": "Alertes automatiques pour Rapports Annuels et Taxe de Franchise"
+                    }
+                ],
+                "deliverables": [
+                    "Création LLC Delaware/Wyoming",
+                    "EIN Tax ID (Service Express)",
+                    "Résolution Banque US",
+                    "Support Vérification Stripe",
+                    "Operating Agreement Digital"
+                ],
+                "growth": "Growth",
+                "growthPrice": "1 799 MAD",
+                "growthDesc": "Pour les entrepreneurs débutants",
+                "growthFeatures": [
+                    "Création LLC + EIN",
+                    "Agent Enregistré (1 an)",
+                    "Operating Agreement",
+                    "Support Vérification Stripe"
+                ],
+                "fullService": "Full Service",
+                "fullServicePrice": "3 500 MAD",
+                "fullServiceDesc": "Infrastructure business complète",
+                "fullServiceFeatures": [
+                    "Tout le plan Growth",
+                    "Configuration FinTech Banking",
+                    "Bureau Virtuel + Scanning Courrier",
+                    "Dashboard de Conformité",
+                    "Consultation Stratégie Fiscale"
+                ]
+            },
+            "social": {
+                "premiumFeatures": [
+                    {
+                        "title": "Contenu Trilingue",
+                        "desc": "Locuteurs natifs en Darija, Français et Anglais"
+                    },
+                    {
+                        "title": "Community Management",
+                        "desc": "Engagement quotidien et gestion des réponses"
+                    },
+                    {
+                        "title": "Stratégie de Contenu",
+                        "desc": "Calendriers mensuels et storytelling"
+                    },
+                    {
+                        "title": "Analytics & Reporting",
+                        "desc": "Insights de performance hebdomadaires"
+                    },
+                    {
+                        "title": "Gestion de Crise",
+                        "desc": "Protocoles de protection de réputation"
+                    }
+                ],
+                "deliverables": [
+                    "Calendrier de Contenu Mensuel",
+                    "Community Management",
+                    "Rapports de Performance",
+                    "Stratégie d'Engagement",
+                    "Guidelines de Voix de Marque"
+                ],
+                "standardPackage": "Inclus dans le Forfait Standard",
+                "contentCalendar": "Calendrier de Contenu",
+                "contentCalendarDesc": "Planification et programmation mensuelle",
+                "graphicDesign": "Design Graphique",
+                "graphicDesignDesc": "Mises en page Instagram/LinkedIn",
+                "scheduling": "Programmation",
+                "schedulingDesc": "Publications à l'heure prévue",
+                "edgeDesc": "Stratégie sociale menée par des humains avec nuance culturelle — pas de contenu généré par IA.",
+                "readyToElevate": "Prêt à Élever Votre Présence Sociale ?",
+                "pricingNote": "Niveau d'implication, pas nombre de posts",
+                "presence": "Présence",
+                "presencePrice": "8 000 MAD",
+                "perMonth": "/mois",
+                "presenceFeatures": [
+                    "12 Posts/mois",
+                    "Designs + Légendes",
+                    "Calendrier de Contenu"
+                ],
+                "noCommunity": "Sans Community Mgmt",
+                "engagement": "Engagement",
+                "engagementPrice": "18 000 MAD",
+                "engagementFeatures": [
+                    "8 Reels + 8 Posts/mois",
+                    "Gestion quotidienne Stories",
+                    "Community Mgmt (Réponses)",
+                    "Appels stratégie bi-hebdo"
+                ],
+                "dominance": "Dominance",
+                "dominancePrice": "35 000 MAD",
+                "dominanceFeatures": [
+                    "Contenu quotidien (30/mois)",
+                    "Production vidéo complète",
+                    "Account Manager dédié",
+                    "Gestion de crise",
+                    "Rapport ROI mensuel"
+                ],
+                "mostPopular": "Le Plus Populaire"
+            }
         }
     },
     "portfolio": {
