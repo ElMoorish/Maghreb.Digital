@@ -136,10 +136,10 @@ export function Footer() {
                             <li className="flex items-start gap-3">
                                 <Mail className="w-4 h-4 text-maghrib-gold mt-0.5" />
                                 <a
-                                    href="mailto:hello@maghrib.digital"
+                                    href="mailto:contact@maghrib.digital"
                                     className="text-maghrib-cream/60 hover:text-maghrib-cream transition-colors duration-300 text-sm"
                                 >
-                                    hello@maghrib.digital
+                                    contact@maghrib.digital
                                 </a>
                             </li>
                             <li className="flex items-start gap-3">

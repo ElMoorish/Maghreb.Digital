@@ -58,10 +58,10 @@ export function Contact() {
                                 <div>
                                     <p className="text-sm text-maghrib-taupe">{t.contact.info.email}</p>
                                     <a
-                                        href="mailto:hello@maghrib.digital"
+                                        href="mailto:contact@maghrib.digital"
                                         className="text-maghrib-charcoal hover:text-maghrib-terracotta transition-colors duration-300"
                                     >
-                                        hello@maghrib.digital
+                                        contact@maghrib.digital
                                     </a>
                                 </div>
                             </div>

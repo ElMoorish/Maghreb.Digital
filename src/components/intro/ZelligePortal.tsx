@@ -11,8 +11,30 @@ interface ZelligePortalProps {
 }
 
 export function ZelligePortal({ children, showPortal = true }: ZelligePortalProps) {
-    const [isOpen, setIsOpen] = useState(!showPortal);
+    // Check if there's a hash in the URL on initial load - if so, skip the portal
+    const [isOpen, setIsOpen] = useState(() => {
+        if (typeof window !== 'undefined') {
+            // Skip portal if there's a hash in the URL (e.g., #about, #contact)
+            return !showPortal || window.location.hash.length > 0;
+        }
+        return !showPortal;
+    });
     const { dictionary: t } = useDictionary();
+
+    // Handle hash scrolling after portal is skipped or opened
+    useEffect(() => {
+        if (isOpen && typeof window !== 'undefined' && window.location.hash) {
+            // Small delay to ensure DOM is ready
+            const timer = setTimeout(() => {
+                const hash = window.location.hash.substring(1);
+                const element = document.getElementById(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+            return () => clearTimeout(timer);
+        }
+    }, [isOpen]);
 
     const handleEnter = () => {
         // Scroll to top first
@@ -20,9 +42,9 @@ export function ZelligePortal({ children, showPortal = true }: ZelligePortalProp
         setIsOpen(true);
     };
 
-    // Ensure we're at top when portal closes
+    // Ensure we're at top when portal closes (only if no hash)
     useEffect(() => {
-        if (isOpen) {
+        if (isOpen && typeof window !== 'undefined' && !window.location.hash) {
             window.scrollTo({ top: 0, behavior: "instant" });
         }
     }, [isOpen]);
