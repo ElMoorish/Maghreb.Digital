@@ -4,19 +4,14 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, CheckCircle, Mail, Phone, MapPin } from "lucide-react";
 import { useDictionary } from "@/components/providers/DictionaryProvider";
+import { useForm, ValidationError } from "@formspree/react";
 
 export function Contact() {
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true, margin: "-100px" });
-    const [formState, setFormState] = useState<"idle" | "submitting" | "success">("idle");
+    const [state, handleSubmit] = useForm("mgovnkkk");
     const [focusedField, setFocusedField] = useState<string | null>(null);
     const { dictionary: t } = useDictionary();
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setFormState("submitting");
-        setTimeout(() => setFormState("success"), 2000);
-    };
 
     const inputClasses = (field: string) =>
         `w-full px-4 py-4 bg-maghrib-cream border rounded-sm text-maghrib-charcoal placeholder:text-maghrib-taupe/50 outline-none transition-all duration-500 ${focusedField === field
@@ -98,7 +93,7 @@ export function Contact() {
                         transition={{ duration: 1, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
                     >
                         <div className="beige-card p-8 md:p-12">
-                            {formState === "success" ? (
+                            {state.succeeded ? (
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
@@ -127,26 +122,32 @@ export function Contact() {
                                                 {t.contact.form.name}
                                             </label>
                                             <input
+                                                id="name"
                                                 type="text"
+                                                name="name"
                                                 placeholder="John Doe"
                                                 required
                                                 onFocus={() => setFocusedField("name")}
                                                 onBlur={() => setFocusedField(null)}
                                                 className={inputClasses("name")}
                                             />
+                                            <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 text-xs mt-1" />
                                         </div>
                                         <div>
                                             <label className="block text-sm font-medium text-maghrib-charcoal mb-2">
                                                 {t.contact.form.email}
                                             </label>
                                             <input
+                                                id="email"
                                                 type="email"
+                                                name="email"
                                                 placeholder="john@example.com"
                                                 required
                                                 onFocus={() => setFocusedField("email")}
                                                 onBlur={() => setFocusedField(null)}
                                                 className={inputClasses("email")}
                                             />
+                                            <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-xs mt-1" />
                                         </div>
                                     </div>
 
@@ -155,6 +156,8 @@ export function Contact() {
                                             {t.contact.form.service}
                                         </label>
                                         <select
+                                            id="service"
+                                            name="service"
                                             required
                                             onFocus={() => setFocusedField("service")}
                                             onBlur={() => setFocusedField(null)}
@@ -166,6 +169,7 @@ export function Contact() {
                                             <option value="social">{t.contact.form.social}</option>
                                             <option value="other">{t.contact.form.other}</option>
                                         </select>
+                                        <ValidationError prefix="Service" field="service" errors={state.errors} className="text-red-500 text-xs mt-1" />
                                     </div>
 
                                     <div>
@@ -173,6 +177,8 @@ export function Contact() {
                                             {t.contact.form.message}
                                         </label>
                                         <textarea
+                                            id="message"
+                                            name="message"
                                             placeholder="..."
                                             rows={5}
                                             required
@@ -180,16 +186,17 @@ export function Contact() {
                                             onBlur={() => setFocusedField(null)}
                                             className={`${inputClasses("message")} resize-none`}
                                         />
+                                        <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-500 text-xs mt-1" />
                                     </div>
 
                                     <motion.button
                                         type="submit"
-                                        disabled={formState === "submitting"}
+                                        disabled={state.submitting}
                                         whileHover={{ y: -2 }}
                                         whileTap={{ scale: 0.98 }}
                                         className="w-full btn-primary py-4 disabled:opacity-70 disabled:cursor-not-allowed"
                                     >
-                                        {formState === "submitting" ? (
+                                        {state.submitting ? (
                                             <span className="flex items-center justify-center gap-2">
                                                 <motion.div
                                                     animate={{ rotate: 360 }}
