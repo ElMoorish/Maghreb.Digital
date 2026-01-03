@@ -308,7 +308,8 @@
         "stats": {
             "years": "Années d'Expérience",
             "projects": "Projets Livrés",
-            "countries": "Pays Servis"
+            "countries": "Pays Servis",
+            "satisfaction": "Satisfaction Client"
         }
     },
     "contact": {

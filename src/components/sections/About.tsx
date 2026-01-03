@@ -35,7 +35,7 @@ export function About() {
         { value: 5, suffix: "+", label: t.about.stats.years, icon: Clock },
         { value: 50, suffix: "+", label: t.about.stats.projects, icon: Award },
         { value: 12, suffix: "+", label: t.about.stats.countries, icon: Users },
-        { value: 98, suffix: "%", label: "Client Satisfaction", icon: BadgeCheck },
+        { value: 98, suffix: "%", label: t.about.stats.satisfaction, icon: BadgeCheck },
     ];
 
     return (
