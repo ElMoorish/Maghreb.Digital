@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useDictionary } from "@/components/providers/DictionaryProvider";
+import { useParams } from "next/navigation";
 
 const featureIcons = {
     web: [Cpu, Palette, LineChart, Sparkles],
@@ -37,6 +38,14 @@ export function Services() {
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true, margin: "-100px" });
     const { dictionary: t } = useDictionary();
+    const params = useParams();
+    const locale = params.locale as string;
+
+    const serviceLinks: Record<"web" | "llc" | "social", string> = {
+        web: `/${locale}/services/web-development`,
+        llc: `/${locale}/services/llc-formation`,
+        social: `/${locale}/services/social-media`,
+    };
 
     const services = [
         {
@@ -172,7 +181,7 @@ export function Services() {
 
                                 {/* CTA */}
                                 <Link
-                                    href="#contact"
+                                    href={serviceLinks[service.id]}
                                     className="inline-flex items-center gap-2 text-sm font-medium text-maghrib-charcoal group/link"
                                 >
                                     <span className="border-b border-maghrib-charcoal/30 group-hover/link:border-maghrib-gold transition-colors duration-300">
