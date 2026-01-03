@@ -92,35 +92,34 @@
                 "fullDevCodeDesc": "Développement sur mesure avec Next.js",
                 "vitrine": "Vitrine",
                 "vitrineDesc": "Site vitrine professionnel",
-                "vitrinePrice": "À partir de 1 600 MAD",
-                "vitrineDevPrice": "À partir de 5 000 MAD",
+                "vitrinePriceCMS": "1 499 MAD",
+                "vitrinePriceCode": "3 199 MAD",
+                "vitrineFeatures": [
+                    "Design Responsive",
+                    "Page À Propos",
+                    "Page Contact",
+                    "Structure SEO Valide"
+                ],
                 "ecommerce": "E-Commerce",
                 "ecommerceDesc": "Boutique en ligne complète",
-                "ecommercePrice": "À partir de 3 400 MAD",
-                "ecommerceCrm": "E-Commerce + CRM",
-                "ecommerceCrmDesc": "CRM + Développement de site",
-                "ecommerceCrmPrice": "10 000 MAD",
-                "fullPackage": "Full Package",
-                "fullPackageDesc": "Solution complète",
-                "fullPackagePrice": "À partir de 7 500 MAD",
-                "fullPackageDevPrice": "100 000 MAD",
-                "features": {
-                    "responsive": "Design responsive",
-                    "essentialPages": "Pages essentielles",
-                    "basicSeo": "SEO de base",
-                    "productCatalog": "Catalogue produits",
-                    "onlinePayment": "Paiement en ligne",
-                    "orderManagement": "Gestion des commandes",
-                    "fullConception": "Conception complète",
-                    "socialIncluded": "Réseaux sociaux inclus",
-                    "hostingIncluded": "Hébergement inclus",
-                    "nextjsArch": "Architecture Next.js",
-                    "seoOptimized": "SEO Optimisé",
-                    "headlessCms": "CMS Headless",
-                    "ecommerceIntegrated": "E-Commerce intégré",
-                    "customDashboard": "Dashboard personnalisé",
-                    "premiumHosting": "Hébergement premium"
-                },
+                "ecommercePriceCMS": "3 399 MAD",
+                "ecommercePriceCode": "6 799 MAD",
+                "ecommerceFeatures": [
+                    "Hébergement Inclus",
+                    "Email Professionnel",
+                    "Nom de Domaine",
+                    "Création de Logo"
+                ],
+                "ecommercePlus": "E-Commerce Plus",
+                "ecommercePlusDesc": "Boutique + Croissance Sociale",
+                "ecommercePlusPriceCMS": "5 999 MAD",
+                "ecommercePlusPriceCode": "14 999 MAD",
+                "ecommercePlusFeatures": [
+                    "Toutes fonctionnalités E-Commerce",
+                    "Présence Réseaux Sociaux",
+                    "20 Posts/Mois",
+                    "Stratégie de Contenu"
+                ],
                 "popular": "Populaire",
                 "recommended": "Recommandé"
             },
@@ -161,24 +160,33 @@
                     "Support Vérification Stripe",
                     "Operating Agreement Digital"
                 ],
+                "starter": "Starter",
+                "starterPrice": "1 799 MAD",
+                "starterDesc": "Pack essentiel de formation",
+                "starterFeatures": [
+                    "Création LLC + EIN",
+                    "Agent Enregistré (1 an)",
+                    "Operating Agreement",
+                    "Numéro de Téléphone (1 an)"
+                ],
                 "growth": "Growth",
-                "growthPrice": "1 799 MAD",
-                "growthDesc": "Pour les entrepreneurs débutants",
+                "growthPrice": "2 299 MAD",
+                "growthDesc": "Pour les entreprises en croissance",
                 "growthFeatures": [
                     "Création LLC + EIN",
                     "Agent Enregistré (1 an)",
                     "Operating Agreement",
-                    "Support Vérification Stripe"
+                    "Support Vérification Stripe",
+                    "Numéro de Téléphone (1 an)"
                 ],
-                "fullService": "Full Service",
-                "fullServicePrice": "3 500 MAD",
-                "fullServiceDesc": "Infrastructure business complète",
-                "fullServiceFeatures": [
-                    "Tout le plan Growth",
-                    "Configuration FinTech Banking",
-                    "Bureau Virtuel + Scanning Courrier",
-                    "Dashboard de Conformité",
-                    "Consultation Stratégie Fiscale"
+                "business": "Business",
+                "businessPrice": "3 999 MAD",
+                "businessDesc": "Infrastructure digitale complète",
+                "businessFeatures": [
+                    "Création Site Web + Domaine",
+                    "LLC + Agent Enregistré",
+                    "Numéro de Téléphone (1 an)",
+                    "Email Professionnel"
                 ]
             },
             "social": {
@@ -222,26 +230,26 @@
                 "readyToElevate": "Prêt à Élever Votre Présence Sociale ?",
                 "pricingNote": "Niveau d'implication, pas nombre de posts",
                 "presence": "Présence",
-                "presencePrice": "8 000 MAD",
+                "presencePrice": "3 000 MAD",
                 "perMonth": "/mois",
                 "presenceFeatures": [
-                    "12 Posts/mois",
+                    "20 Posts/mois",
                     "Designs + Légendes",
                     "Calendrier de Contenu"
                 ],
                 "noCommunity": "Sans Community Mgmt",
                 "engagement": "Engagement",
-                "engagementPrice": "18 000 MAD",
+                "engagementPrice": "4 500 MAD",
                 "engagementFeatures": [
-                    "8 Reels + 8 Posts/mois",
+                    "12 Posts + 8 Reels",
                     "Gestion quotidienne Stories",
                     "Community Mgmt (Réponses)",
                     "Appels stratégie bi-hebdo"
                 ],
                 "dominance": "Dominance",
-                "dominancePrice": "35 000 MAD",
+                "dominancePrice": "8 000 MAD",
                 "dominanceFeatures": [
-                    "Contenu quotidien (30/mois)",
+                    "15 Posts + 15 Reels",
                     "Production vidéo complète",
                     "Account Manager dédié",
                     "Gestion de crise",

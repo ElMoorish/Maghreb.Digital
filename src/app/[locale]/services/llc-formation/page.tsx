@@ -116,7 +116,7 @@ export default async function LLCFormationPage({
 
             {/* Pricing Tiers */}
             <section className="py-20">
-                <div className="max-w-5xl mx-auto px-6 lg:px-12">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12">
                     <div className="text-center mb-12">
                         <h2 className="font-heading text-3xl text-maghrib-charcoal mb-4">
                             {p.pricingPackages}
@@ -124,33 +124,47 @@ export default async function LLCFormationPage({
                         <p className="text-maghrib-taupe">{p.pricingDesc}</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                        {/* Growth */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        {/* Starter */}
                         <div className="p-8 bg-maghrib-cream border border-maghrib-taupe/20 rounded-sm">
+                            <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">{llcPage.starter}</h3>
+                            <p className="text-3xl font-heading text-maghrib-terracotta mb-4">{llcPage.starterPrice}</p>
+                            <p className="text-sm text-maghrib-taupe mb-6">{llcPage.starterDesc}</p>
+                            <ul className="space-y-3 text-sm text-maghrib-taupe">
+                                {llcPage.starterFeatures.map((feature: string, idx: number) => (
+                                    <li key={idx} className="flex items-center gap-2">
+                                        <Check className="w-4 h-4 text-maghrib-gold flex-shrink-0" /> <span className="text-left">{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Growth */}
+                        <div className="p-8 bg-maghrib-cream border border-maghrib-taupe/20 rounded-sm relative shadow-sm">
+                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-maghrib-terracotta text-maghrib-cream text-xs font-medium tracking-wider uppercase rounded-sm">
+                                Recommended
+                            </div>
                             <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">{llcPage.growth}</h3>
                             <p className="text-3xl font-heading text-maghrib-terracotta mb-4">{llcPage.growthPrice}</p>
                             <p className="text-sm text-maghrib-taupe mb-6">{llcPage.growthDesc}</p>
                             <ul className="space-y-3 text-sm text-maghrib-taupe">
                                 {llcPage.growthFeatures.map((feature: string, idx: number) => (
                                     <li key={idx} className="flex items-center gap-2">
-                                        <Check className="w-4 h-4 text-maghrib-gold" /> {feature}
+                                        <Check className="w-4 h-4 text-maghrib-gold flex-shrink-0" /> <span className="text-left">{feature}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
 
-                        {/* Full Service */}
+                        {/* Business */}
                         <div className="p-8 bg-maghrib-charcoal text-maghrib-cream border-2 border-maghrib-gold rounded-sm relative">
-                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-maghrib-gold text-maghrib-charcoal text-xs font-medium tracking-wider uppercase rounded-sm">
-                                {llcPage.fullService}
-                            </div>
-                            <h3 className="font-heading text-xl mb-2">{llcPage.fullService}</h3>
-                            <p className="text-3xl font-heading text-maghrib-gold mb-4">{llcPage.fullServicePrice}</p>
-                            <p className="text-sm text-maghrib-cream/70 mb-6">{llcPage.fullServiceDesc}</p>
+                            <h3 className="font-heading text-xl mb-2">{llcPage.business}</h3>
+                            <p className="text-3xl font-heading text-maghrib-gold mb-4">{llcPage.businessPrice}</p>
+                            <p className="text-sm text-maghrib-cream/70 mb-6">{llcPage.businessDesc}</p>
                             <ul className="space-y-3 text-sm text-maghrib-cream/80">
-                                {llcPage.fullServiceFeatures.map((feature: string, idx: number) => (
+                                {llcPage.businessFeatures.map((feature: string, idx: number) => (
                                     <li key={idx} className="flex items-center gap-2">
-                                        <Check className="w-4 h-4 text-maghrib-gold" /> {feature}
+                                        <Check className="w-4 h-4 text-maghrib-gold flex-shrink-0" /> <span className="text-left">{feature}</span>
                                     </li>
                                 ))}
                             </ul>

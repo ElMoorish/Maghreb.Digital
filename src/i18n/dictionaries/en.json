@@ -92,35 +92,34 @@
                 "fullDevCodeDesc": "Custom development with Next.js",
                 "vitrine": "Vitrine",
                 "vitrineDesc": "Professional showcase site",
-                "vitrinePrice": "From 1,600 MAD",
-                "vitrineDevPrice": "From 5,000 MAD",
+                "vitrinePriceCMS": "1,499 MAD",
+                "vitrinePriceCode": "3,199 MAD",
+                "vitrineFeatures": [
+                    "Responsive Design",
+                    "About Us Page",
+                    "Contact Us Page",
+                    "Valid SEO Structure"
+                ],
                 "ecommerce": "E-Commerce",
                 "ecommerceDesc": "Complete online store",
-                "ecommercePrice": "From 3,400 MAD",
-                "ecommerceCrm": "E-Commerce + CRM",
-                "ecommerceCrmDesc": "CRM + Website Development",
-                "ecommerceCrmPrice": "10,000 MAD",
-                "fullPackage": "Full Package",
-                "fullPackageDesc": "Complete solution",
-                "fullPackagePrice": "From 7,500 MAD",
-                "fullPackageDevPrice": "100,000 MAD",
-                "features": {
-                    "responsive": "Responsive design",
-                    "essentialPages": "Essential pages",
-                    "basicSeo": "Basic SEO",
-                    "productCatalog": "Product catalog",
-                    "onlinePayment": "Online payment",
-                    "orderManagement": "Order management",
-                    "fullConception": "Complete conception",
-                    "socialIncluded": "Social media included",
-                    "hostingIncluded": "Hosting included",
-                    "nextjsArch": "Next.js Architecture",
-                    "seoOptimized": "Optimized SEO",
-                    "headlessCms": "Headless CMS",
-                    "ecommerceIntegrated": "Integrated E-Commerce",
-                    "customDashboard": "Custom dashboard",
-                    "premiumHosting": "Premium hosting"
-                },
+                "ecommercePriceCMS": "3,399 MAD",
+                "ecommercePriceCode": "6,799 MAD",
+                "ecommerceFeatures": [
+                    "Hosting Included",
+                    "Professional Email",
+                    "Domain Name",
+                    "Logo Design"
+                ],
+                "ecommercePlus": "E-Commerce Plus",
+                "ecommercePlusDesc": "Store + Social Growth",
+                "ecommercePlusPriceCMS": "5,999 MAD",
+                "ecommercePlusPriceCode": "14,999 MAD",
+                "ecommercePlusFeatures": [
+                    "All E-Commerce Features",
+                    "Social Media Presence",
+                    "20 Posts/Month",
+                    "Content Strategy"
+                ],
                 "popular": "Popular",
                 "recommended": "Recommended"
             },
@@ -161,24 +160,33 @@
                     "Stripe Verification Support",
                     "Digital Operating Agreement"
                 ],
+                "starter": "Starter",
+                "starterPrice": "1,799 MAD",
+                "starterDesc": "Essential formation package",
+                "starterFeatures": [
+                    "LLC Formation + EIN",
+                    "Registered Agent (1 year)",
+                    "Operating Agreement",
+                    "1 Year Phone Number"
+                ],
                 "growth": "Growth",
-                "growthPrice": "1,799 MAD",
-                "growthDesc": "For starting entrepreneurs",
+                "growthPrice": "2,299 MAD",
+                "growthDesc": "For scaling businesses",
                 "growthFeatures": [
                     "LLC Formation + EIN",
                     "Registered Agent (1 year)",
                     "Operating Agreement",
-                    "Stripe Verification Support"
+                    "Stripe Verification Support",
+                    "1 Year Phone Number"
                 ],
-                "fullService": "Full Service",
-                "fullServicePrice": "3,500 MAD",
-                "fullServiceDesc": "Complete business infrastructure",
-                "fullServiceFeatures": [
-                    "Everything in Growth",
-                    "FinTech Banking Setup",
-                    "Virtual Office + Mail Scanning",
-                    "Compliance Dashboard",
-                    "Tax Strategy Consultation"
+                "business": "Business",
+                "businessPrice": "3,999 MAD",
+                "businessDesc": "Complete digital infrastructure",
+                "businessFeatures": [
+                    "Website Creation + Domain",
+                    "LLC + Registered Agent",
+                    "1 Year Phone Number",
+                    "Email Professional"
                 ]
             },
             "social": {
@@ -222,26 +230,26 @@
                 "readyToElevate": "Ready to Elevate Your Social Presence?",
                 "pricingNote": "Level of involvement, not number of posts",
                 "presence": "Presence",
-                "presencePrice": "8,000 MAD",
+                "presencePrice": "3,000 MAD",
                 "perMonth": "/month",
                 "presenceFeatures": [
-                    "12 Posts/month",
+                    "20 Posts/month",
                     "Static Designs + Captions",
                     "Content Calendar"
                 ],
                 "noCommunity": "No Community Mgmt",
                 "engagement": "Engagement",
-                "engagementPrice": "18,000 MAD",
+                "engagementPrice": "4,500 MAD",
                 "engagementFeatures": [
-                    "8 Reels + 8 Posts/month",
+                    "12 Posts + 8 Reels",
                     "Daily Story Management",
                     "Community Mgmt (Replies)",
                     "Bi-Weekly Strategy Calls"
                 ],
                 "dominance": "Dominance",
-                "dominancePrice": "35,000 MAD",
+                "dominancePrice": "8,000 MAD",
                 "dominanceFeatures": [
-                    "Daily Content (30/mo)",
+                    "15 Posts + 15 Reels",
                     "Full Video Production",
                     "Dedicated Account Manager",
                     "Crisis Management",
