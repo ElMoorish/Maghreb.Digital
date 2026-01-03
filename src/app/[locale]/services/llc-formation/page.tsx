@@ -135,30 +135,30 @@ export default async function LLCFormationPage({
                         {/* Growth */}
                         <div className="p-8 bg-maghrib-cream border border-maghrib-taupe/20 rounded-sm">
                             <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">Growth</h3>
-                            <p className="text-3xl font-heading text-maghrib-terracotta mb-4">$1,500</p>
-                            <p className="text-sm text-maghrib-taupe mb-6">For entrepreneurs starting out</p>
+                            <p className="text-3xl font-heading text-maghrib-terracotta mb-4">1 799 MAD</p>
+                            <p className="text-sm text-maghrib-taupe mb-6">Pour les entrepreneurs débutants</p>
                             <ul className="space-y-3 text-sm text-maghrib-taupe">
                                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> LLC Formation + EIN</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Registered Agent (1 year)</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Registered Agent (1 an)</li>
                                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Operating Agreement</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Stripe Verification Support</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Support Stripe Verification</li>
                             </ul>
                         </div>
 
-                        {/* Empire */}
+                        {/* Full Service */}
                         <div className="p-8 bg-maghrib-charcoal text-maghrib-cream border-2 border-maghrib-gold rounded-sm relative">
                             <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-maghrib-gold text-maghrib-charcoal text-xs font-medium tracking-wider uppercase rounded-sm">
                                 Full Service
                             </div>
-                            <h3 className="font-heading text-xl mb-2">Empire</h3>
-                            <p className="text-3xl font-heading text-maghrib-gold mb-4">$3,500</p>
-                            <p className="text-sm text-maghrib-cream/70 mb-6">Complete business infrastructure</p>
+                            <h3 className="font-heading text-xl mb-2">Full Service</h3>
+                            <p className="text-3xl font-heading text-maghrib-gold mb-4">3 500 MAD</p>
+                            <p className="text-sm text-maghrib-cream/70 mb-6">Infrastructure business complète</p>
                             <ul className="space-y-3 text-sm text-maghrib-cream/80">
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Everything in Growth</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> FinTech Banking Setup</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Tout le plan Growth</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Configuration FinTech Banking</li>
                                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Virtual Office + Mail Scanning</li>
                                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Compliance Dashboard</li>
-                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Tax Strategy Consultation</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-maghrib-gold" /> Consultation Stratégie Fiscale</li>
                             </ul>
                         </div>
                     </div>
