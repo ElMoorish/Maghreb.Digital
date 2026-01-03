@@ -1,8 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { useRef } from "react";
 import Image from "next/image";
 
 const projects = [
@@ -43,7 +42,6 @@ const projects = [
 export function Portfolio() {
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true, margin: "-100px" });
-    const [hoveredId, setHoveredId] = useState<number | null>(null);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -106,9 +104,7 @@ export function Portfolio() {
                         <motion.div
                             key={project.id}
                             variants={itemVariants}
-                            onMouseEnter={() => setHoveredId(project.id)}
-                            onMouseLeave={() => setHoveredId(null)}
-                            className="group cursor-pointer"
+                            className="group"
                         >
                             {/* Image Container */}
                             <div className="relative aspect-[4/3] overflow-hidden rounded-sm mb-6">
@@ -119,22 +115,7 @@ export function Portfolio() {
                                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 {/* Overlay */}
-                                <div className="absolute inset-0 bg-maghrib-charcoal/0 group-hover:bg-maghrib-charcoal/20 transition-colors duration-500" />
-
-                                {/* View Project Button */}
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    animate={{
-                                        opacity: hoveredId === project.id ? 1 : 0,
-                                        scale: hoveredId === project.id ? 1 : 0.8,
-                                    }}
-                                    transition={{ duration: 0.3 }}
-                                    className="absolute inset-0 flex items-center justify-center"
-                                >
-                                    <div className="w-16 h-16 rounded-full bg-maghrib-cream flex items-center justify-center shadow-soft-lg">
-                                        <ArrowUpRight className="w-6 h-6 text-maghrib-terracotta" />
-                                    </div>
-                                </motion.div>
+                                <div className="absolute inset-0 bg-maghrib-charcoal/0 group-hover:bg-maghrib-charcoal/10 transition-colors duration-500" />
                             </div>
 
                             {/* Project Info */}
@@ -153,22 +134,6 @@ export function Portfolio() {
                             </p>
                         </motion.div>
                     ))}
-                </motion.div>
-
-                {/* View All CTA */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="text-center mt-16"
-                >
-                    <motion.button
-                        whileHover={{ y: -2 }}
-                        transition={{ duration: 0.3 }}
-                        className="btn-secondary"
-                    >
-                        View All Projects
-                    </motion.button>
                 </motion.div>
             </div>
         </section>
