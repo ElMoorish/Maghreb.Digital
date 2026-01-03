@@ -15,7 +15,7 @@ interface LayoutClientProps {
 
 export function LayoutClient({ children, locale }: LayoutClientProps) {
     const pathname = usePathname();
-    // Homepage is either "/" or "/{locale}" (e.g., "/fr", "/en", "/ar")
+    // Homepage is either "/" or "/{locale}" (e.g., "/fr", "/en")
     const isHomepage = pathname === "/" || pathname === `/${locale}`;
 
     return (

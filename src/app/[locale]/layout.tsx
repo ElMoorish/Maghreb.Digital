@@ -20,7 +20,6 @@ export async function generateMetadata({
     const titles: Record<Locale, string> = {
         fr: "Maghrib.Digital | Agence Digitale Premium",
         en: "Maghrib.Digital | Premium Digital Agency",
-        ar: "Maghrib.Digital | وكالة رقمية متميزة",
     };
 
     return {
@@ -43,7 +42,7 @@ export async function generateMetadata({
             title: titles[locale],
             description: dict.hero.subheadline,
             type: "website",
-            locale: locale === "fr" ? "fr_FR" : locale === "ar" ? "ar_MA" : "en_US",
+            locale: locale === "fr" ? "fr_FR" : "en_US",
             siteName: "Maghrib.Digital",
         },
     };

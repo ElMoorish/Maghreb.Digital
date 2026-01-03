@@ -1,15 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
-import Image from "next/image";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 import Link from "next/link";
 import { useDictionary } from "@/components/providers/DictionaryProvider";
 
 const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/maghrib.digital/", label: "Instagram" },
 ];
 
 export function Footer() {
@@ -41,15 +38,8 @@ export function Footer() {
                         transition={{ duration: 0.8 }}
                         className="lg:col-span-1"
                     >
-                        <Link href={`/${locale}`} className="flex items-center gap-3 mb-6">
-                            <Image
-                                src="/Logo.png"
-                                alt="Maghrib.Digital"
-                                width={40}
-                                height={40}
-                                className="opacity-90"
-                            />
-                            <span className="font-heading text-lg text-maghrib-cream">
+                        <Link href={`/${locale}`} className="inline-block mb-6">
+                            <span className="font-heading text-2xl text-maghrib-cream">
                                 Maghrib<span className="text-maghrib-gold">.</span>Digital
                             </span>
                         </Link>
