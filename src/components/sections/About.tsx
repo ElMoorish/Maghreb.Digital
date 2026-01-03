@@ -7,7 +7,7 @@ import { useDictionary } from "@/components/providers/DictionaryProvider";
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
     const count = useMotionValue(0);
-    const rounded = useTransform(count, (latest) => Math.round(latest));
+    const rounded = useTransform(count, (latest: number) => Math.round(latest));
     const ref = useRef<HTMLSpanElement>(null);
     const isInView = useInView(ref, { once: true });
 
