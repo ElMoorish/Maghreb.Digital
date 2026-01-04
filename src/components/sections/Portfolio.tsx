@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { useDictionary } from "@/components/providers/DictionaryProvider";
+import { TechStack } from "@/components/ui/TechStack";
 
 interface PortfolioItem {
     id: number;
@@ -112,6 +113,9 @@ export function Portfolio() {
                         </motion.div>
                     ))}
                 </motion.div>
+
+                {/* Tech Stack Logos */}
+                <TechStack />
             </div>
         </section>
     );
