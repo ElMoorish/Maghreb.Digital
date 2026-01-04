@@ -176,16 +176,20 @@
                     "Création LLC + EIN",
                     "Agent Enregistré (1 an)",
                     "Operating Agreement",
-                    "Support Vérification Stripe",
+                    "Passerelle de Paiement",
                     "Numéro de Téléphone (1 an)"
                 ],
                 "business": "Business",
                 "businessPrice": "3 999 MAD",
                 "businessDesc": "Infrastructure digitale complète",
                 "businessFeatures": [
-                    "Création Site Web + Domaine",
-                    "LLC + Agent Enregistré",
+                    "Création LLC + EIN",
+                    "Agent Enregistré (1 an)",
+                    "Operating Agreement",
+                    "Passerelle de Paiement",
                     "Numéro de Téléphone (1 an)",
+                    "Création Site Web",
+                    "Nom de Domaine",
                     "Email Professionnel"
                 ]
             },

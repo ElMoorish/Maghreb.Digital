@@ -176,17 +176,21 @@
                     "LLC Formation + EIN",
                     "Registered Agent (1 year)",
                     "Operating Agreement",
-                    "Stripe Verification Support",
+                    "Payment Gateway",
                     "1 Year Phone Number"
                 ],
                 "business": "Business",
                 "businessPrice": "3,999 MAD",
                 "businessDesc": "Complete digital infrastructure",
                 "businessFeatures": [
-                    "Website Creation + Domain",
-                    "LLC + Registered Agent",
+                    "LLC Formation + EIN",
+                    "Registered Agent (1 year)",
+                    "Operating Agreement",
+                    "Payment Gateway",
                     "1 Year Phone Number",
-                    "Email Professional"
+                    "Website Creation",
+                    "Domain Name",
+                    "Professional Email"
                 ]
             },
             "social": {
