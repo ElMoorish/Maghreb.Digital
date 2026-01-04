@@ -28,8 +28,8 @@ export function PricingCard({ tier, index }: PricingCardProps) {
             transition={{ duration: 0.8, delay: 0.15 * index }}
             whileHover={{ y: -8 }}
             className={`relative p-8 lg:p-10 rounded-sm transition-all duration-500 ${tier.highlighted
-                    ? "bg-maghrib-charcoal text-maghrib-cream border-2 border-maghrib-gold"
-                    : "bg-maghrib-cream border border-maghrib-taupe/20 hover:border-maghrib-gold"
+                ? "bg-maghrib-charcoal text-maghrib-cream border-2 border-maghrib-gold"
+                : "bg-maghrib-cream border border-maghrib-taupe/20 hover:border-maghrib-gold"
                 }`}
         >
             {/* Popular Badge */}
@@ -82,7 +82,7 @@ export function PricingCard({ tier, index }: PricingCardProps) {
                                 }`}
                         />
                         <span
-                            className={`text-sm ${tier.highlighted ? "text-maghrib-cream/80" : "text-maghrib-taupe"
+                            className={`text-sm ${tier.highlighted ? "text-maghrib-cream/80" : "text-maghrib-charcoal"
                                 }`}
                         >
                             {feature}
@@ -95,8 +95,8 @@ export function PricingCard({ tier, index }: PricingCardProps) {
             <Link
                 href="#contact"
                 className={`block w-full text-center py-4 text-sm font-medium tracking-wider uppercase transition-all duration-300 ${tier.highlighted
-                        ? "bg-maghrib-gold text-maghrib-charcoal hover:bg-maghrib-terracotta"
-                        : "bg-maghrib-charcoal text-maghrib-cream hover:bg-maghrib-terracotta"
+                    ? "bg-maghrib-gold text-maghrib-charcoal hover:bg-maghrib-terracotta"
+                    : "bg-maghrib-charcoal text-maghrib-cream hover:bg-maghrib-terracotta"
                     }`}
             >
                 {tier.ctaText || "Get Started"}

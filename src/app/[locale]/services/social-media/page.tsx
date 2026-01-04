@@ -135,13 +135,13 @@ export default async function SocialMediaPage({
                             <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">{socialPage.presence}</h3>
                             <p className="text-3xl font-heading text-maghrib-terracotta mb-1">{socialPage.presencePrice}</p>
                             <p className="text-sm text-maghrib-taupe mb-6">{socialPage.perMonth}</p>
-                            <ul className="space-y-3 text-sm text-maghrib-taupe">
+                            <ul className="space-y-3 text-sm">
                                 {socialPage.presenceFeatures.map((feature: string, idx: number) => (
-                                    <li key={idx} className="flex items-center gap-2">
+                                    <li key={idx} className="flex items-center gap-2 text-maghrib-charcoal">
                                         <Check className="w-4 h-4 text-maghrib-gold" /> {feature}
                                     </li>
                                 ))}
-                                <li className="flex items-center gap-2 text-maghrib-taupe/50">
+                                <li className="flex items-center gap-2 text-maghrib-taupe">
                                     <span className="w-4 h-4">—</span> {socialPage.noCommunity}
                                 </li>
                             </ul>
@@ -169,9 +169,9 @@ export default async function SocialMediaPage({
                             <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">{socialPage.dominance}</h3>
                             <p className="text-3xl font-heading text-maghrib-terracotta mb-1">{socialPage.dominancePrice}</p>
                             <p className="text-sm text-maghrib-taupe mb-6">{socialPage.perMonth}</p>
-                            <ul className="space-y-3 text-sm text-maghrib-taupe">
+                            <ul className="space-y-3 text-sm">
                                 {socialPage.dominanceFeatures.map((feature: string, idx: number) => (
-                                    <li key={idx} className="flex items-center gap-2">
+                                    <li key={idx} className="flex items-center gap-2 text-maghrib-charcoal">
                                         <Check className="w-4 h-4 text-maghrib-gold" /> {feature}
                                     </li>
                                 ))}

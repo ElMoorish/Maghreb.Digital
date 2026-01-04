@@ -130,10 +130,10 @@ export default async function LLCFormationPage({
                             <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">{llcPage.starter}</h3>
                             <p className="text-3xl font-heading text-maghrib-terracotta mb-4">{llcPage.starterPrice}</p>
                             <p className="text-sm text-maghrib-taupe mb-6">{llcPage.starterDesc}</p>
-                            <ul className="space-y-3 text-sm text-maghrib-taupe">
+                            <ul className="space-y-3 text-sm">
                                 {llcPage.starterFeatures.map((feature: string, idx: number) => (
                                     <li key={idx} className="flex items-center gap-2">
-                                        <Check className="w-4 h-4 text-maghrib-gold flex-shrink-0" /> <span className="text-left">{feature}</span>
+                                        <Check className="w-4 h-4 text-maghrib-gold flex-shrink-0" /> <span className="text-left text-maghrib-charcoal">{feature}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -147,10 +147,10 @@ export default async function LLCFormationPage({
                             <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">{llcPage.growth}</h3>
                             <p className="text-3xl font-heading text-maghrib-terracotta mb-4">{llcPage.growthPrice}</p>
                             <p className="text-sm text-maghrib-taupe mb-6">{llcPage.growthDesc}</p>
-                            <ul className="space-y-3 text-sm text-maghrib-taupe">
+                            <ul className="space-y-3 text-sm">
                                 {llcPage.growthFeatures.map((feature: string, idx: number) => (
                                     <li key={idx} className="flex items-center gap-2">
-                                        <Check className="w-4 h-4 text-maghrib-gold flex-shrink-0" /> <span className="text-left">{feature}</span>
+                                        <Check className="w-4 h-4 text-maghrib-gold flex-shrink-0" /> <span className="text-left text-maghrib-charcoal">{feature}</span>
                                     </li>
                                 ))}
                             </ul>

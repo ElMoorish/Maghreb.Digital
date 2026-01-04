@@ -95,7 +95,7 @@ function PricingCard({ title, price, desc, features, isPopular, popularLabel }: 
                 {features.map((f: string, i: number) => (
                     <li key={i} className="flex items-center gap-2">
                         <Check className="w-4 h-4 text-maghrib-gold flex-shrink-0" />
-                        <span className={isPopular ? 'text-maghrib-cream/80' : 'text-maghrib-taupe'}>{f}</span>
+                        <span className={isPopular ? 'text-maghrib-cream/80' : 'text-maghrib-charcoal'}>{f}</span>
                     </li>
                 ))}
             </ul>
