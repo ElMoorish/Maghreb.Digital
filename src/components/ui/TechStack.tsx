@@ -2,57 +2,72 @@
 
 import { motion } from "framer-motion";
 
-// Tech stack icons styled with brand colors
-// Using maghrib-terracotta (#CCA483) and maghrib-gold (#D4AF37) as accent colors
-
+// Tech stack icons styled with brand colors with website links
 const techStack = [
-    { name: "Python", icon: PythonIcon },
-    { name: "Vue.js", icon: VueIcon },
-    { name: "Next.js", icon: NextJsIcon },
-    { name: "Nuxt.js", icon: NuxtIcon },
-    { name: "JavaScript", icon: JavaScriptIcon },
-    { name: "HTML5", icon: Html5Icon },
-    { name: "CSS3", icon: Css3Icon },
-    { name: "React", icon: ReactIcon },
-    { name: "Framer Motion", icon: FramerIcon },
-    { name: "GSAP", icon: GsapIcon },
-    { name: "Shopify", icon: ShopifyIcon },
-    { name: "WordPress", icon: WordPressIcon },
-    { name: "YouCan", icon: YouCanIcon },
+    { name: "Python", icon: PythonIcon, url: "https://www.python.org" },
+    { name: "Vue.js", icon: VueIcon, url: "https://vuejs.org" },
+    { name: "Next.js", icon: NextJsIcon, url: "https://nextjs.org" },
+    { name: "Nuxt.js", icon: NuxtIcon, url: "https://nuxt.com" },
+    { name: "JavaScript", icon: JavaScriptIcon, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { name: "HTML5", icon: Html5Icon, url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: "CSS3", icon: Css3Icon, url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { name: "React", icon: ReactIcon, url: "https://react.dev" },
+    { name: "Framer Motion", icon: FramerIcon, url: "https://www.framer.com/motion" },
+    { name: "GSAP", icon: GsapIcon, url: "https://gsap.com" },
+    { name: "Shopify", icon: ShopifyIcon, url: "https://www.shopify.com" },
+    { name: "WordPress", icon: WordPressIcon, url: "https://wordpress.org" },
+    { name: "YouCan", icon: YouCanIcon, url: "https://youcan.shop" },
 ];
 
 export function TechStack() {
+    // Duplicate the array for seamless infinite scroll
+    const duplicatedStack = [...techStack, ...techStack];
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-20 pt-16 border-t border-maghrib-taupe/20"
+            className="mt-20 pt-16 border-t border-maghrib-taupe/20 overflow-hidden"
         >
             <p className="text-center text-sm tracking-[0.2em] uppercase text-maghrib-taupe mb-10">
                 Technologies We Master
             </p>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-                {techStack.map((tech, index) => (
-                    <motion.div
-                        key={tech.name}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.05 * index }}
-                        whileHover={{ scale: 1.15, y: -4 }}
-                        className="group flex flex-col items-center gap-2"
-                        title={tech.name}
-                    >
-                        <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-maghrib-taupe group-hover:text-maghrib-terracotta transition-colors duration-300">
-                            <tech.icon />
-                        </div>
-                        <span className="text-[10px] md:text-xs text-maghrib-taupe/60 group-hover:text-maghrib-terracotta/80 transition-colors duration-300 font-medium">
-                            {tech.name}
-                        </span>
-                    </motion.div>
-                ))}
+
+            {/* Infinite Scroll Container */}
+            <div className="relative w-screen left-1/2 -translate-x-1/2">
+                <motion.div
+                    className="flex items-center gap-12 md:gap-16"
+                    animate={{
+                        x: ["0%", "-50%"],
+                    }}
+                    transition={{
+                        x: {
+                            duration: 30,
+                            repeat: Infinity,
+                            ease: "linear",
+                        },
+                    }}
+                >
+                    {duplicatedStack.map((tech, index) => (
+                        <a
+                            key={`${tech.name}-${index}`}
+                            href={tech.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex flex-col items-center gap-2 flex-shrink-0 cursor-pointer"
+                            title={`Visit ${tech.name}`}
+                        >
+                            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-maghrib-taupe group-hover:text-maghrib-terracotta transition-all duration-300 group-hover:scale-110">
+                                <tech.icon />
+                            </div>
+                            <span className="text-[10px] md:text-xs text-maghrib-taupe/60 group-hover:text-maghrib-terracotta/80 transition-colors duration-300 font-medium whitespace-nowrap">
+                                {tech.name}
+                            </span>
+                        </a>
+                    ))}
+                </motion.div>
             </div>
         </motion.div>
     );
