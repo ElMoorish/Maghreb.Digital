@@ -158,7 +158,7 @@ export default async function LLCFormationPage({
 
                         {/* Business */}
                         <div className="p-8 bg-maghrib-charcoal text-maghrib-cream border-2 border-maghrib-gold rounded-sm relative">
-                            <h3 className="font-heading text-xl mb-2">{llcPage.business}</h3>
+                            <h3 className="font-heading text-xl mb-2 text-maghrib-cream">{llcPage.business}</h3>
                             <p className="text-3xl font-heading text-maghrib-gold mb-4">{llcPage.businessPrice}</p>
                             <p className="text-sm text-maghrib-cream/70 mb-6">{llcPage.businessDesc}</p>
                             <ul className="space-y-3 text-sm text-maghrib-cream/80">

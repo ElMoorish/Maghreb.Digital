@@ -152,7 +152,7 @@ export default async function SocialMediaPage({
                             <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-maghrib-gold text-maghrib-charcoal text-xs font-medium tracking-wider uppercase rounded-sm">
                                 {socialPage.mostPopular}
                             </div>
-                            <h3 className="font-heading text-xl mb-2">{socialPage.engagement}</h3>
+                            <h3 className="font-heading text-xl mb-2 text-maghrib-cream">{socialPage.engagement}</h3>
                             <p className="text-3xl font-heading text-maghrib-gold mb-1">{socialPage.engagementPrice}</p>
                             <p className="text-sm text-maghrib-cream/70 mb-6">{socialPage.perMonth}</p>
                             <ul className="space-y-3 text-sm text-maghrib-cream/80">

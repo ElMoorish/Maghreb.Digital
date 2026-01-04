@@ -88,7 +88,7 @@ function PricingCard({ title, price, desc, features, isPopular, popularLabel }: 
                     {popularLabel}
                 </div>
             )}
-            <h4 className="font-heading text-xl mb-2">{title}</h4>
+            <h4 className={`font-heading text-xl mb-2 ${isPopular ? 'text-maghrib-cream' : 'text-maghrib-charcoal'}`}>{title}</h4>
             <p className={`text-3xl font-heading mb-4 ${isPopular ? 'text-maghrib-gold' : 'text-maghrib-terracotta'}`}>{price}</p>
             <p className={`text-sm mb-6 ${isPopular ? 'text-maghrib-cream/70' : 'text-maghrib-taupe'}`}>{desc}</p>
             <ul className="space-y-3 text-sm">
