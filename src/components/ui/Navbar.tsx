@@ -91,7 +91,7 @@ export function Navbar() {
                             onMouseLeave={() => setServicesOpen(false)}
                         >
                             <button
-                                className={`flex items-center gap-1 hover:text-maghrib-charcoal transition-colors duration-500 tracking-wide uppercase group ${scrolled ? "text-xs text-maghrib-taupe" : "text-sm text-maghrib-taupe"
+                                className={`flex items-center gap-1 hover:text-maghrib-charcoal transition-colors duration-500 tracking-wide uppercase group whitespace-nowrap ${scrolled ? "text-xs text-maghrib-taupe" : "text-sm text-maghrib-taupe"
                                     }`}
                             >
                                 {t.nav.services}
@@ -141,7 +141,7 @@ export function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className={`relative text-maghrib-taupe hover:text-maghrib-charcoal transition-colors duration-500 tracking-wide uppercase group ${scrolled ? "text-xs" : "text-sm"
+                                className={`relative text-maghrib-taupe hover:text-maghrib-charcoal transition-colors duration-500 tracking-wide uppercase group whitespace-nowrap ${scrolled ? "text-xs" : "text-sm"
                                     }`}
                             >
                                 {link.label}
@@ -154,7 +154,7 @@ export function Navbar() {
 
                         <Link
                             href="#contact"
-                            className={`btn-primary transition-all duration-500 ${scrolled ? "text-xs px-4 py-2" : "text-xs px-6 py-3"
+                            className={`btn-primary transition-all duration-500 whitespace-nowrap ${scrolled ? "text-xs px-4 py-2" : "text-xs px-6 py-3"
                                 }`}
                         >
                             {t.nav.getStarted}

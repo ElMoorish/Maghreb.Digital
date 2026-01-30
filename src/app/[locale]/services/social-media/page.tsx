@@ -121,7 +121,7 @@ export default async function SocialMediaPage({
 
             {/* Pricing Tiers */}
             <section className="py-20">
-                <div className="max-w-5xl mx-auto px-6 lg:px-12">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12">
                     <div className="text-center mb-12">
                         <h2 className="font-heading text-3xl text-maghrib-charcoal mb-4">
                             {p.pricingPackages}
@@ -129,7 +129,7 @@ export default async function SocialMediaPage({
                         <p className="text-maghrib-taupe">{socialPage.pricingNote}</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {/* Presence */}
                         <div className="p-8 bg-maghrib-cream border border-maghrib-taupe/20 rounded-sm">
                             <h3 className="font-heading text-xl text-maghrib-charcoal mb-2">{socialPage.presence}</h3>

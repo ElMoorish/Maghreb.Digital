@@ -123,6 +123,9 @@
                 "recommended": "Recommended"
             },
             "llc": {
+                "toggleStandard": "Standard LLC",
+                "toggleAnonymous": "Anonymous LLC",
+                "recommended": "Recommended",
                 "standardPackage": "Standard Package Includes",
                 "companyFormation": "Company Formation",
                 "companyFormationDesc": "Filing Articles of Organization",
@@ -164,6 +167,7 @@
                 "starterDesc": "Essential formation package",
                 "starterFeatures": [
                     "LLC Formation + EIN",
+                    "Partner Options (Free)",
                     "Registered Agent (1 year)",
                     "Operating Agreement",
                     "1 Year Phone Number"
@@ -173,6 +177,7 @@
                 "growthDesc": "For scaling businesses",
                 "growthFeatures": [
                     "LLC Formation + EIN",
+                    "Partner Options (Free)",
                     "Registered Agent (1 year)",
                     "Operating Agreement",
                     "Payment Gateway",
@@ -183,6 +188,7 @@
                 "businessDesc": "Complete digital infrastructure",
                 "businessFeatures": [
                     "LLC Formation + EIN",
+                    "Partner Options (Free)",
                     "Registered Agent (1 year)",
                     "Operating Agreement",
                     "Payment Gateway",
@@ -190,6 +196,34 @@
                     "Website Creation",
                     "Domain Name",
                     "Professional Email"
+                ],
+                "anonymousTitle": "Anonymous LLC",
+                "anonymousSubtitle": "Maximum Privacy Protection",
+                "anonymousBasic": "Anonymous Basic",
+                "anonymousBasicPrice": "3,499 MAD",
+                "anonymousBasicDesc": "Private ownership structure",
+                "anonymousBasicFeatures": [
+                    "Anonymous LLC Formation",
+                    "Partner Options (Free)",
+                    "Nominee Service",
+                    "Privacy-Protected EIN",
+                    "Registered Agent (1 year)",
+                    "Operating Agreement",
+                    "1 Year Phone Number"
+                ],
+                "anonymousPro": "Anonymous Pro",
+                "anonymousProPrice": "4,499 MAD",
+                "anonymousProDesc": "Full privacy + payment processing",
+                "anonymousProFeatures": [
+                    "Anonymous LLC Formation",
+                    "Partner Options (Free)",
+                    "Nominee Service",
+                    "Privacy-Protected EIN",
+                    "Registered Agent (1 year)",
+                    "Operating Agreement",
+                    "Payment Gateway Setup",
+                    "1 Year Phone Number",
+                    "Virtual Office Address"
                 ]
             },
             "social": {
@@ -233,7 +267,7 @@
                 "readyToElevate": "Ready to Elevate Your Social Presence?",
                 "pricingNote": "Level of involvement, not number of posts",
                 "presence": "Presence",
-                "presencePrice": "3,000 MAD",
+                "presencePrice": "2,999 MAD",
                 "perMonth": "/month",
                 "presenceFeatures": [
                     "20 Posts/month",
@@ -242,7 +276,7 @@
                 ],
                 "noCommunity": "No Community Mgmt",
                 "engagement": "Engagement",
-                "engagementPrice": "4,500 MAD",
+                "engagementPrice": "4,499 MAD",
                 "engagementFeatures": [
                     "12 Posts + 8 Reels",
                     "Daily Story Management",
@@ -250,7 +284,7 @@
                     "Bi-Weekly Strategy Calls"
                 ],
                 "dominance": "Dominance",
-                "dominancePrice": "8,000 MAD",
+                "dominancePrice": "7,999 MAD",
                 "dominanceFeatures": [
                     "15 Posts + 15 Reels",
                     "Full Video Production",

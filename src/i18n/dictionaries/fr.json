@@ -123,6 +123,9 @@
                 "recommended": "Recommandé"
             },
             "llc": {
+                "toggleStandard": "LLC Standard",
+                "toggleAnonymous": "LLC Anonyme",
+                "recommended": "Recommandé",
                 "standardPackage": "Inclus dans le Forfait Standard",
                 "companyFormation": "Création de Société",
                 "companyFormationDesc": "Dépôt des Statuts de l'Entreprise",
@@ -164,6 +167,7 @@
                 "starterDesc": "Pack essentiel de formation",
                 "starterFeatures": [
                     "Création LLC + EIN",
+                    "Options Partenaires (Gratuit)",
                     "Agent Enregistré (1 an)",
                     "Operating Agreement",
                     "Numéro de Téléphone (1 an)"
@@ -173,6 +177,7 @@
                 "growthDesc": "Pour les entreprises en croissance",
                 "growthFeatures": [
                     "Création LLC + EIN",
+                    "Options Partenaires (Gratuit)",
                     "Agent Enregistré (1 an)",
                     "Operating Agreement",
                     "Passerelle de Paiement",
@@ -183,6 +188,7 @@
                 "businessDesc": "Infrastructure digitale complète",
                 "businessFeatures": [
                     "Création LLC + EIN",
+                    "Options Partenaires (Gratuit)",
                     "Agent Enregistré (1 an)",
                     "Operating Agreement",
                     "Passerelle de Paiement",
@@ -190,6 +196,34 @@
                     "Création Site Web",
                     "Nom de Domaine",
                     "Email Professionnel"
+                ],
+                "anonymousTitle": "LLC Anonyme",
+                "anonymousSubtitle": "Protection Maximale de la Vie Privée",
+                "anonymousBasic": "Anonyme Basic",
+                "anonymousBasicPrice": "3 499 MAD",
+                "anonymousBasicDesc": "Structure de propriété privée",
+                "anonymousBasicFeatures": [
+                    "Création LLC Anonyme",
+                    "Options Partenaires (Gratuit)",
+                    "Service de Nominee",
+                    "EIN Protégé",
+                    "Agent Enregistré (1 an)",
+                    "Operating Agreement",
+                    "Numéro de Téléphone (1 an)"
+                ],
+                "anonymousPro": "Anonyme Pro",
+                "anonymousProPrice": "4 499 MAD",
+                "anonymousProDesc": "Confidentialité totale + paiements",
+                "anonymousProFeatures": [
+                    "Création LLC Anonyme",
+                    "Options Partenaires (Gratuit)",
+                    "Service de Nominee",
+                    "EIN Protégé",
+                    "Agent Enregistré (1 an)",
+                    "Operating Agreement",
+                    "Passerelle de Paiement",
+                    "Numéro de Téléphone (1 an)",
+                    "Adresse Bureau Virtuel"
                 ]
             },
             "social": {
@@ -233,7 +267,7 @@
                 "readyToElevate": "Prêt à Élever Votre Présence Sociale ?",
                 "pricingNote": "Niveau d'implication, pas nombre de posts",
                 "presence": "Présence",
-                "presencePrice": "3 000 MAD",
+                "presencePrice": "2 999 MAD",
                 "perMonth": "/mois",
                 "presenceFeatures": [
                     "20 Posts/mois",
@@ -242,7 +276,7 @@
                 ],
                 "noCommunity": "Sans Community Mgmt",
                 "engagement": "Engagement",
-                "engagementPrice": "4 500 MAD",
+                "engagementPrice": "4 499 MAD",
                 "engagementFeatures": [
                     "12 Posts + 8 Reels",
                     "Gestion quotidienne Stories",
@@ -250,7 +284,7 @@
                     "Appels stratégie bi-hebdo"
                 ],
                 "dominance": "Dominance",
-                "dominancePrice": "8 000 MAD",
+                "dominancePrice": "7 999 MAD",
                 "dominanceFeatures": [
                     "15 Posts + 15 Reels",
                     "Production vidéo complète",
