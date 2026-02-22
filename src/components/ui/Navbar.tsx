@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Code2, Globe2, Users } from "lucide-react";
+import { Menu, X, ChevronDown, Code2, Globe2, Users, Wrench, MessageCircle, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useDictionary } from "@/components/providers/DictionaryProvider";
@@ -12,6 +12,7 @@ export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
+    const [toolsOpen, setToolsOpen] = useState(false);
     const { dictionary: t, locale } = useDictionary();
 
     const services = [
@@ -32,6 +33,21 @@ export function Navbar() {
             label: t.services.items.social.title,
             description: t.services.items.social.hook,
             icon: Users,
+        },
+    ];
+
+    const tools = [
+        {
+            href: `/${locale}/tools/faq`,
+            label: locale === "fr" ? "Assistant LLC" : "LLC Assistant",
+            description: locale === "fr" ? "FAQ sur la création LLC" : "FAQ about LLC formation",
+            icon: MessageCircle,
+        },
+        {
+            href: `/${locale}/tools/name-checker`,
+            label: locale === "fr" ? "Vérificateur de Nom" : "Name Checker",
+            description: locale === "fr" ? "Disponibilité du nom" : "Check name availability",
+            icon: Search,
         },
     ];
 
@@ -136,6 +152,58 @@ export function Navbar() {
                             </AnimatePresence>
                         </div>
 
+                        {/* Tools Dropdown */}
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setToolsOpen(true)}
+                            onMouseLeave={() => setToolsOpen(false)}
+                        >
+                            <button
+                                className={`flex items-center gap-1 hover:text-maghrib-charcoal transition-colors duration-500 tracking-wide uppercase group whitespace-nowrap ${scrolled ? "text-xs text-maghrib-taupe" : "text-sm text-maghrib-taupe"
+                                    }`}
+                            >
+                                <Wrench className="w-4 h-4" />
+                                <ChevronDown
+                                    className={`w-4 h-4 transition-transform duration-300 ${toolsOpen ? "rotate-180" : ""
+                                        }`}
+                                />
+                            </button>
+
+                            <AnimatePresence>
+                                {toolsOpen && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: 10 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="absolute top-full left-0 mt-4 w-72 bg-maghrib-cream border border-maghrib-taupe/20 shadow-soft-lg rounded-sm overflow-hidden"
+                                    >
+                                        <div className="py-2">
+                                            {tools.map((tool) => (
+                                                <Link
+                                                    key={tool.href}
+                                                    href={tool.href}
+                                                    className="flex items-start gap-4 px-5 py-4 hover:bg-maghrib-beige transition-colors duration-300 group"
+                                                >
+                                                    <div className="w-10 h-10 rounded-sm bg-maghrib-beige border border-maghrib-taupe/10 flex items-center justify-center group-hover:border-maghrib-gold transition-colors duration-300">
+                                                        <tool.icon className="w-5 h-5 text-maghrib-terracotta" />
+                                                    </div>
+                                                    <div>
+                                                        <span className="block text-sm font-medium text-maghrib-charcoal group-hover:text-maghrib-terracotta transition-colors duration-300">
+                                                            {tool.label}
+                                                        </span>
+                                                        <span className="block text-xs text-maghrib-taupe mt-0.5">
+                                                            {tool.description}
+                                                        </span>
+                                                    </div>
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
+
                         {/* Other Links */}
                         {navLinks.map((link) => (
                             <Link
@@ -200,6 +268,27 @@ export function Navbar() {
                                         >
                                             <service.icon className="w-5 h-5 text-maghrib-taupe" />
                                             {service.label}
+                                        </Link>
+                                    ))}
+                                </div>
+
+                                <div className="w-full h-px bg-maghrib-taupe/20" />
+
+                                {/* Tools Links */}
+                                <div className="space-y-2">
+                                    <p className="text-xs tracking-widest uppercase text-maghrib-taupe px-2 flex items-center gap-2">
+                                        <Wrench className="w-3 h-3" />
+                                        {locale === "fr" ? "Outils" : "Tools"}
+                                    </p>
+                                    {tools.map((tool) => (
+                                        <Link
+                                            key={tool.href}
+                                            href={tool.href}
+                                            onClick={() => setIsOpen(false)}
+                                            className="flex items-center gap-3 py-2 px-2 text-maghrib-charcoal hover:text-maghrib-terracotta transition-colors duration-300 rounded-lg hover:bg-maghrib-beige"
+                                        >
+                                            <tool.icon className="w-5 h-5 text-maghrib-taupe" />
+                                            {tool.label}
                                         </Link>
                                     ))}
                                 </div>
