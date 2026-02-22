@@ -14,7 +14,7 @@ interface AvailabilityResult {
   suggestions: string[];
 }
 
-async function checkWyomingAvailability(name: string): Promise<{ available: boolean; url: string }> {
+async function checkWyomingAvailability(name: string): Promise<{ available: boolean | null; url: string }> {
   // Wyoming business search URL
   const searchUrl = `https://wyobiz.wyo.gov/Business/FilingSearch.aspx`;
   
