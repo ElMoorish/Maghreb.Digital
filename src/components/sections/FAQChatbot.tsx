@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { Send, Bot, User, Sparkles } from "lucide-react";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 
 // FAQ Knowledge Base
