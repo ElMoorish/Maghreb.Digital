@@ -2,78 +2,33 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Search, CheckCircle2, XCircle, Loader2, ArrowLeft, Building2, AlertCircle, ExternalLink } from "lucide-react";
+import { Search, CheckCircle2, XCircle, Loader2, ArrowLeft, Building2, AlertCircle } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
 interface AvailabilityResult {
-  delaware: boolean | null;
   wyoming: boolean | null;
-  delawareUrl?: string;
-  wyomingUrl?: string;
   suggestions: string[];
 }
 
-async function checkWyomingAvailability(name: string): Promise<{ available: boolean | null; url: string }> {
-  // Wyoming business search URL
-  const searchUrl = `https://wyobiz.wyo.gov/Business/FilingSearch.aspx`;
+async function checkWyomingAvailability(name: string): Promise<boolean | null> {
+  // Simulated check - we verify for our clients
+  // In production, this would call a serverless function
   
-  try {
-    // Since we can't directly access Wyoming's .aspx page from client-side
-    // due to CORS and ViewState requirements, we'll provide the direct link
-    // and a simulated check for demo purposes
-    
-    // In production, this would call a serverless function that scrapes the page
-    // For now, we return the search URL and a simulated result
-    
-    const simulatedAvailable = !name.toLowerCase().includes("test") && 
-                               !name.toLowerCase().includes("admin") &&
-                               !name.toLowerCase().includes("llc");
-    
-    return {
-      available: simulatedAvailable,
-      url: searchUrl
-    };
-  } catch (error) {
-    return {
-      available: null,
-      url: searchUrl
-    };
-  }
-}
-
-async function checkDelawareAvailability(name: string): Promise<{ available: boolean | null; url: string }> {
-  // Delaware entity search URL
-  const searchUrl = `https://icis.corp.delaware.gov/ecorp/entitysearch/NameSearch.aspx`;
+  const simulatedAvailable = !name.toLowerCase().includes("test") && 
+                             !name.toLowerCase().includes("admin") &&
+                             !name.toLowerCase().includes("llc") &&
+                             !name.toLowerCase().includes("corp");
   
-  try {
-    // Similar to Wyoming - in production, serverless function needed
-    const simulatedAvailable = !name.toLowerCase().includes("test") && 
-                               !name.toLowerCase().includes("admin") &&
-                               !name.toLowerCase().includes("corp");
-    
-    return {
-      available: simulatedAvailable,
-      url: searchUrl
-    };
-  } catch (error) {
-    return {
-      available: null,
-      url: searchUrl
-    };
-  }
+  return simulatedAvailable;
 }
 
 async function checkNameAvailability(name: string): Promise<AvailabilityResult> {
-  // Run both checks in parallel
-  const [wyomingResult, delawareResult] = await Promise.all([
-    checkWyomingAvailability(name),
-    checkDelawareAvailability(name)
-  ]);
+  const wyomingAvailable = await checkWyomingAvailability(name);
   
   // Generate suggestions if not available
   const suggestions = [];
-  if (!wyomingResult.available && !delawareResult.available) {
+  if (!wyomingAvailable) {
     suggestions.push(
       `${name} Group`,
       `${name} Ventures`,
@@ -84,10 +39,7 @@ async function checkNameAvailability(name: string): Promise<AvailabilityResult> 
   }
   
   return {
-    delaware: delawareResult.available,
-    wyoming: wyomingResult.available,
-    delawareUrl: delawareResult.url,
-    wyomingUrl: wyomingResult.url,
+    wyoming: wyomingAvailable,
     suggestions
   };
 }
@@ -136,39 +88,37 @@ export function NameChecker() {
   const texts = {
     fr: {
       title: "Vérificateur de Nom",
-      subtitle: "Vérifiez si votre nom d'entreprise est disponible au Delaware et au Wyoming",
+      subtitle: "Vérifiez si votre nom d'entreprise est disponible au Wyoming",
       placeholder: "Entrez le nom de votre entreprise (ex: Maghrib Ventures)",
       check: "Vérifier",
       checking: "Vérification...",
       available: "Probablement disponible",
       taken: "Probablement non disponible",
       unknown: "Vérification manuelle requise",
-      delaware: "Delaware",
       wyoming: "Wyoming",
       suggestions: "Suggestions alternatives",
       cta: "Réserver ce nom",
-      note: "Résultat indicatif. La disponibilité finale sera confirmée lors du dépôt. Cliquez sur les liens pour vérifier officiellement.",
+      note: "Résultat indicatif. Nous vérifions officiellement pour nos clients avant le dépôt.",
       error: "Erreur",
-      verifyOfficial: "Vérifier officiellement",
-      tip: "Conseil: Évitez les noms génériques comme 'Test' ou 'Admin' qui sont souvent pris."
+      tip: "Conseil: Évitez les noms génériques comme 'Test' ou 'Admin' qui sont souvent pris.",
+      weCheck: "Nous vérifions la disponibilité officielle pour vous"
     },
     en: {
       title: "Name Checker",
-      subtitle: "Check if your business name is available in Delaware and Wyoming",
+      subtitle: "Check if your business name is available in Wyoming",
       placeholder: "Enter your business name (e.g., Maghrib Ventures)",
       check: "Check",
       checking: "Checking...",
       available: "Likely available",
       taken: "Likely not available",
       unknown: "Manual verification required",
-      delaware: "Delaware",
       wyoming: "Wyoming",
       suggestions: "Alternative suggestions",
       cta: "Reserve this name",
-      note: "Indicative result. Final availability will be confirmed during filing. Click links to verify officially.",
+      note: "Indicative result. We verify officially for our clients before filing.",
       error: "Error",
-      verifyOfficial: "Verify officially",
-      tip: "Tip: Avoid generic names like 'Test' or 'Admin' which are often taken."
+      tip: "Tip: Avoid generic names like 'Test' or 'Admin' which are often taken.",
+      weCheck: "We verify official availability for you"
     }
   };
   
@@ -269,84 +219,44 @@ export function NameChecker() {
             transition={{ duration: 0.5 }}
             className="space-y-6"
           >
-            {/* State Results */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Delaware */}
-              <div className={`warm-card p-6 ${
-                results.delaware === true ? "border-green-500/30" : 
-                results.delaware === false ? "border-red-500/30" : 
-                "border-yellow-500/30"
-              }`}>
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-heading text-lg text-maghrib-charcoal">{t.delaware}</h3>
-                  {results.delaware === true ? (
-                    <CheckCircle2 className="w-6 h-6 text-green-500" />
-                  ) : results.delaware === false ? (
-                    <XCircle className="w-6 h-6 text-red-500" />
-                  ) : (
-                    <AlertCircle className="w-6 h-6 text-yellow-500" />
-                  )}
-                </div>
-                <p className={`text-sm mb-3 ${
-                  results.delaware === true ? "text-green-600" : 
-                  results.delaware === false ? "text-red-500" : 
-                  "text-yellow-600"
-                }`}>
-                  {results.delaware === true ? t.available : 
-                   results.delaware === false ? t.taken : 
-                   t.unknown}
-                </p>
-                <a
-                  href={results.delawareUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs text-maghrib-terracotta hover:underline"
-                >
-                  {t.verifyOfficial} <ExternalLink className="w-3 h-3" />
-                </a>
+            {/* Wyoming Result */}
+            <div className={`warm-card p-8 text-center ${
+              results.wyoming === true ? "border-green-500/30" : 
+              results.wyoming === false ? "border-red-500/30" : 
+              "border-yellow-500/30"
+            }`}>
+              <h3 className="font-heading text-xl text-maghrib-charcoal mb-4">{t.wyoming}</h3>
+              
+              <div className="flex justify-center mb-4">
+                {results.wyoming === true ? (
+                  <CheckCircle2 className="w-16 h-16 text-green-500" />
+                ) : results.wyoming === false ? (
+                  <XCircle className="w-16 h-16 text-red-500" />
+                ) : (
+                  <AlertCircle className="w-16 h-16 text-yellow-500" />
+                )}
               </div>
               
-              {/* Wyoming */}
-              <div className={`warm-card p-6 ${
-                results.wyoming === true ? "border-green-500/30" : 
-                results.wyoming === false ? "border-red-500/30" : 
-                "border-yellow-500/30"
+              <p className={`text-lg font-medium mb-4 ${
+                results.wyoming === true ? "text-green-600" : 
+                results.wyoming === false ? "text-red-500" : 
+                "text-yellow-600"
               }`}>
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-heading text-lg text-maghrib-charcoal">{t.wyoming}</h3>
-                  {results.wyoming === true ? (
-                    <CheckCircle2 className="w-6 h-6 text-green-500" />
-                  ) : results.wyoming === false ? (
-                    <XCircle className="w-6 h-6 text-red-500" />
-                  ) : (
-                    <AlertCircle className="w-6 h-6 text-yellow-500" />
-                  )}
-                </div>
-                <p className={`text-sm mb-3 ${
-                  results.wyoming === true ? "text-green-600" : 
-                  results.wyoming === false ? "text-red-500" : 
-                  "text-yellow-600"
-                }`}>
-                  {results.wyoming === true ? t.available : 
-                   results.wyoming === false ? t.taken : 
-                   t.unknown}
-                </p>
-                <a
-                  href={results.wyomingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs text-maghrib-terracotta hover:underline"
-                >
-                  {t.verifyOfficial} <ExternalLink className="w-3 h-3" />
-                </a>
-              </div>
+                {results.wyoming === true ? t.available : 
+                 results.wyoming === false ? t.taken : 
+                 t.unknown}
+              </p>
+              
+              <p className="text-sm text-maghrib-taupe">
+                {t.weCheck}
+              </p>
             </div>
             
             {/* Suggestions */}
             {results.suggestions.length > 0 && (
               <div className="warm-card p-6">
                 <h3 className="font-heading text-lg text-maghrib-charcoal mb-4">{t.suggestions}</h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 justify-center">
                   {results.suggestions.map((suggestion, idx) => (
                     <button
                       key={idx}
@@ -364,7 +274,7 @@ export function NameChecker() {
             )}
             
             {/* CTA */}
-            {(results.delaware || results.wyoming) && (
+            {results.wyoming && (
               <div className="text-center">
                 <p className="text-xs text-maghrib-taupe mb-4">{t.note}</p>
                 <Link
