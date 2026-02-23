@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Search, CheckCircle2, XCircle, Loader2, ArrowLeft, Building2, AlertCircle } from "lucide-react";
+import { Search, CheckCircle2, XCircle, Loader2, Building2, AlertCircle } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 

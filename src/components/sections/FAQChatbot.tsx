@@ -2,8 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import { MessageCircle, Send, Bot, User, Sparkles, ArrowLeft } from "lucide-react";
-import Link from "next/link";
+import { Send, Bot, User, Sparkles } from "lucide-react";
 import { useParams } from "next/navigation";
 
 // FAQ Knowledge Base
