@@ -125,31 +125,23 @@ export function NameChecker() {
   const t = texts[locale as "fr" | "en"] || texts.fr;
   
   return (
-    <section ref={containerRef} className="min-h-screen pt-24 pb-16 bg-gradient-warm">
+    <section ref={containerRef} className="min-h-screen pt-32 pb-20 bg-gradient-warm">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <Link 
-            href={`/${locale}`}
-            className="inline-flex items-center gap-2 text-sm text-maghrib-taupe hover:text-maghrib-terracotta transition-colors mb-6"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            {locale === "fr" ? "Retour à l'accueil" : "Back to home"}
-          </Link>
-          
-          <div className="w-16 h-16 rounded-full bg-maghrib-terracotta/10 flex items-center justify-center mx-auto mb-6">
-            <Building2 className="w-8 h-8 text-maghrib-terracotta" />
+          <div className="w-20 h-20 rounded-full bg-maghrib-terracotta/10 flex items-center justify-center mx-auto mb-8">
+            <Building2 className="w-10 h-10 text-maghrib-terracotta" />
           </div>
           
           <h1 className="font-heading text-4xl md:text-5xl text-maghrib-charcoal mb-4">
             {t.title}
           </h1>
-          <p className="text-maghrib-taupe max-w-xl mx-auto">
+          <p className="text-maghrib-taupe max-w-xl mx-auto text-lg">
             {t.subtitle}
           </p>
         </motion.div>

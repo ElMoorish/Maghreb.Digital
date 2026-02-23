@@ -162,31 +162,23 @@ export function FAQChatbot() {
     : ["What's the price?", "Timeline?", "Is Stripe included?"];
   
   return (
-    <section ref={containerRef} className="min-h-screen pt-24 pb-16 bg-gradient-warm">
+    <section ref={containerRef} className="min-h-screen pt-32 pb-20 bg-gradient-warm">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <Link 
-            href={`/${locale}`}
-            className="inline-flex items-center gap-2 text-sm text-maghrib-taupe hover:text-maghrib-terracotta transition-colors mb-6"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            {locale === "fr" ? "Retour à l'accueil" : "Back to home"}
-          </Link>
-          
-          <div className="w-16 h-16 rounded-full bg-maghrib-terracotta/10 flex items-center justify-center mx-auto mb-6">
-            <Bot className="w-8 h-8 text-maghrib-terracotta" />
+          <div className="w-20 h-20 rounded-full bg-maghrib-terracotta/10 flex items-center justify-center mx-auto mb-8">
+            <Bot className="w-10 h-10 text-maghrib-terracotta" />
           </div>
           
           <h1 className="font-heading text-4xl md:text-5xl text-maghrib-charcoal mb-4">
             {locale === "fr" ? "Assistant LLC" : "LLC Assistant"}
           </h1>
-          <p className="text-maghrib-taupe max-w-xl mx-auto">
+          <p className="text-maghrib-taupe max-w-xl mx-auto text-lg">
             {locale === "fr" 
               ? "Posez vos questions sur la création de LLC US. Réponses instantanées 24/7."
               : "Ask your questions about US LLC formation. Instant answers 24/7."}
