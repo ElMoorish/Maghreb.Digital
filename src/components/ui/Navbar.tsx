@@ -89,7 +89,7 @@ export function Navbar() {
                             className="relative"
                         >
                             <Image
-                                src="/Logo.jpg"
+                                src="/Logo.png"
                                 alt="Maghrib.Digital"
                                 width={scrolled ? 120 : 160}
                                 height={scrolled ? 40 : 50}

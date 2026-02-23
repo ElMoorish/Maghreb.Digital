@@ -160,7 +160,7 @@ export function ZelligePortal({ children, showPortal = true }: ZelligePortalProp
                                         className="text-center mb-8"
                                     >
                                         <Image
-                                            src="/Logo.jpg"
+                                            src="/Logo.png"
                                             alt="Maghrib.Digital"
                                             width={200}
                                             height={60}
