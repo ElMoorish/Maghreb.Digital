@@ -67,10 +67,10 @@ export function Contact() {
                                 <div>
                                     <p className="text-sm text-maghrib-taupe">{t.contact.info.phone}</p>
                                     <a
-                                        href="tel:+212714402581"
+                                        href="tel:+212613022325"
                                         className="text-maghrib-charcoal hover:text-maghrib-terracotta transition-colors duration-300"
                                     >
-                                        +212 7 14 40 25 81
+                                        +212 6 13 02 23 25
                                     </a>
                                 </div>
                             </div>
