@@ -188,23 +188,42 @@ export function BlogPostClient({ post }: BlogPostClientProps) {
 
 // Simple markdown parser for basic formatting
 function parseMarkdown(content: string): string {
-    return content
-        // Tables - convert to HTML table
-        .replace(/^\|(.+)\|$/gm, (match, row) => {
-            const cells = row.split('|').map((cell: string) => cell.trim());
-            // Check if it's a separator row
-            if (cells.every((cell: string) => /^[-:]+$/.test(cell))) {
-                return ''; // Skip separator rows
-            }
-            const isHeader = cells.some((cell: string) => /\*\*(.+)\*\*/.test(cell));
-            const cellTag = isHeader ? 'th' : 'td';
-            const cellsHtml = cells.map((cell: string) => `<${cellTag} class="px-4 py-2 text-left border-b border-maghrib-taupe/20">${cell}</${cellTag}>`).join('');
-            return `<tr>${cellsHtml}</tr>`;
-        })
-        // Wrap consecutive table rows in table tag
-        .replace(/(<tr>.*<\/tr>\n?)+/g, (match) => {
-            return `<table class="w-full my-6 border-collapse">${match}</table>`;
-        })
+    // First, extract and process tables separately
+    const tableRegex = /(\|.+\|\n)+/g;
+    let processedContent = content;
+    
+    // Process tables
+    processedContent = processedContent.replace(tableRegex, (tableBlock) => {
+        const rows = tableBlock.trim().split('\n');
+        let tableHtml = '<div class="overflow-x-auto my-6"><table class="w-full border-collapse bg-white rounded-sm shadow-sm">';
+        let isFirstRow = true;
+        
+        for (const row of rows) {
+            // Skip separator rows (|---|---|)
+            if (row.match(/^\|[\s\-:]+\|$/)) continue;
+            
+            const cells = row.split('|').filter(cell => cell.trim() !== '');
+            const cellTag = isFirstRow ? 'th' : 'td';
+            const cellClass = isFirstRow 
+                ? 'px-4 py-3 text-left font-semibold text-maghrib-charcoal bg-maghrib-beige border-b-2 border-maghrib-terracotta/30'
+                : 'px-4 py-3 text-left text-maghrib-taupe border-b border-maghrib-taupe/10';
+            
+            const cellsHtml = cells.map(cell => {
+                let cellContent = cell.trim();
+                // Process bold within cells
+                cellContent = cellContent.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+                return `<${cellTag} class="${cellClass}">${cellContent}</${cellTag}>`;
+            }).join('');
+            
+            tableHtml += `<tr>${cellsHtml}</tr>`;
+            isFirstRow = false;
+        }
+        
+        tableHtml += '</table></div>';
+        return tableHtml;
+    });
+    
+    return processedContent
         // Horizontal rules
         .replace(/^---$/gm, '<hr class="my-8 border-t border-maghrib-taupe/20" />')
         // Headers
@@ -218,20 +237,20 @@ function parseMarkdown(content: string): string {
         // Links
         .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-maghrib-terracotta hover:underline">$1</a>')
         // Checkmarks and X marks
-        .replace(/✅/g, '<span class="text-green-600">✓</span>')
-        .replace(/❌/g, '<span class="text-red-600">✗</span>')
+        .replace(/✅/g, '<span class="inline-block text-green-600 mr-1">✓</span>')
+        .replace(/❌/g, '<span class="inline-block text-red-600 mr-1">✗</span>')
         // Numbered lists
-        .replace(/^(\d+)\. (.*$)/gim, '<li class="ml-6 list-decimal text-maghrib-taupe">$2</li>')
+        .replace(/^(\d+)\. (.*$)/gim, '<li class="ml-6 list-decimal text-maghrib-taupe mb-2">$2</li>')
         // Unordered lists
-        .replace(/^\- (.*$)/gim, '<li class="ml-6 list-disc text-maghrib-taupe">$1</li>')
+        .replace(/^\- (.*$)/gim, '<li class="ml-6 list-disc text-maghrib-taupe mb-2">$1</li>')
         // Wrap consecutive list items in ul/ol
-        .replace(/(<li class="ml-6 list-disc.*<\/li>\n?)+/g, (match) => `<ul class="my-4">${match}</ul>`)
-        .replace(/(<li class="ml-6 list-decimal.*<\/li>\n?)+/g, (match) => `<ol class="my-4">${match}</ol>`)
-        // Paragraphs
-        .replace(/\n\n/g, '</p><p class="text-maghrib-taupe leading-relaxed mb-6">')
-        // Wrap in paragraph
-        .replace(/^(.+)$/gm, (match) => {
-            if (match.startsWith('<')) return match;
-            return `<p class="text-maghrib-taupe leading-relaxed mb-6">${match}</p>`;
-        });
+        .replace(/(<li class="ml-6 list-disc[^>]*>.*<\/li>\n?)+/g, (match) => `<ul class="my-4 space-y-1">${match}</ul>`)
+        .replace(/(<li class="ml-6 list-decimal[^>]*>.*<\/li>\n?)+/g, (match) => `<ol class="my-4 space-y-1">${match}</ol>`)
+        // Paragraphs - wrap non-tagged lines
+        .split('\n\n').map(block => {
+            block = block.trim();
+            if (!block) return '';
+            if (block.startsWith('<')) return block;
+            return `<p class="text-maghrib-taupe leading-relaxed mb-6">${block}</p>`;
+        }).join('\n');
 }
