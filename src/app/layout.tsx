@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Montserrat, Noto_Sans_Arabic } from "next/font/google";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -40,6 +41,7 @@ export default function RootLayout({
     return (
         <html lang="fr" className={`${playfair.variable} ${montserrat.variable} ${notoArabic.variable}`}>
             <body className="bg-maghrib-cream text-maghrib-charcoal antialiased">
+                <GoogleAnalytics />
                 {children}
             </body>
         </html>
