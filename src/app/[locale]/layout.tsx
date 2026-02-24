@@ -20,6 +20,7 @@ export async function generateMetadata({
     const titles: Record<Locale, string> = {
         fr: "Maghrib.Digital | Agence Digitale Premium",
         en: "Maghrib.Digital | Premium Digital Agency",
+        ar: "Maghrib.Digital | وكالة رقمية متميزة",
     };
 
     return {
