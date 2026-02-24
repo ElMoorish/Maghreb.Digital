@@ -4,6 +4,7 @@ import { motion, useInView, useMotionValue, useTransform, animate } from "framer
 import { useRef, useEffect } from "react";
 import { Award, BadgeCheck, Users, Clock } from "lucide-react";
 import { useDictionary } from "@/components/providers/DictionaryProvider";
+import { TechStack } from "@/components/ui/TechStack";
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
     const count = useMotionValue(0);
@@ -115,6 +116,9 @@ export function About() {
                     </motion.div>
                 </div>
             </div>
+
+            {/* Tech Stack Slideshow */}
+            <TechStack />
         </section>
     );
 }
