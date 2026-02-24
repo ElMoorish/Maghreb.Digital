@@ -1,0 +1,203 @@
+{
+    "portal": {
+        "tagline": "حيث تلتقي الابتكار بالتراث",
+        "enter": "دخول"
+    },
+    "nav": {
+        "services": "الخدمات",
+        "blog": "المدونة",
+        "portfolio": "أعمالنا",
+        "about": "من نحن",
+        "contact": "اتصل بنا",
+        "getStarted": "ابدأ الآن"
+    },
+    "hero": {
+        "tagline": "وكالة رقمية متميزة",
+        "headline1": "حيث الابتكار",
+        "headline2": "يلتقي بالتراث",
+        "subheadline": "نربط منطقة الشرق الأوسط وشمال أفريقيا بالاقتصاد الرقمي العالمي — من خلال تجارب تحترم التقاليد وتحتضن المستقبل.",
+        "cta1": "ابدأ رحلتك",
+        "cta2": "شاهد إنجازاتنا",
+        "scroll": "مرر للأسفل"
+    },
+    "services": {
+        "tagline": "خبراتنا",
+        "headline": "ثلاثة أعمدة للتميز",
+        "subheadline": "من الكود إلى الأعمال، من المحتوى إلى المجتمع — نشكل كل طبقة من وجودك الرقمي بنية وعناية.",
+        "learnMore": "اعرف المزيد",
+        "items": {
+            "web": {
+                "title": "تطوير ويب عالي الأداء",
+                "hook": "نصنع محركات مبيعات 24/7",
+                "description": "تجارب رقمية فائقة السرعة، محسّنة لمحركات البحث، مبنية بـ Next.js وهندسة حديثة.",
+                "features": ["Next.js 16", "CMS Headless", "SEO-First"]
+            },
+            "llc": {
+                "title": "إنشاء LLC وبنية تحتية",
+                "hook": "مقرك الدولي في انتظارك",
+                "description": "تأسيس شركة شامل مع البنوك والمدفوعات والامتثال — لتموضعك للنمو العالمي.",
+                "features": ["LLCs أمريكية", "Stripe-Ready", "امتثال", "Mercury · Wise · PayPal"]
+            },
+            "social": {
+                "title": "استراتيجية التواصل الاجتماعي",
+                "hook": "ندير سمعتك الرقمية",
+                "description": "استراتيجية اجتماعية بقيادة بشرية بحس ثقافي. نتحدث الدارجة والفرنسية والإنجليزية.",
+                "badge": "مُدار من قبل البشر",
+                "features": ["ثلاثي اللغة", "مجتمع", "تفاعل", "سرد القصص"]
+            }
+        },
+        "pages": {
+            "backToServices": "العودة للخدمات",
+            "edge": "ميزة Maghrib.Digital",
+            "edgeDesc": "ما يميزنا عن الوكالات العادية.",
+            "deliverables": "التسليمات",
+            "pricingPackages": "باقات الأسعار",
+            "pricingDesc": "اختر الحل المناسب لاحتياجاتك",
+            "readyToBuild": "مستعد لبناء حضورك الرقمي؟",
+            "readyToGrow": "مستعد للتوسع دولياً؟",
+            "web": {
+                "premiumFeatures": [
+                    "بنية Next.js 16 — تحميل فوري مع العرض من جانب الخادم",
+                    "تكامل CMS Headless — لوحة تحكم مخصصة لتحديث سهل",
+                    "دعم متعدد اللغات (i18n) — الفرنسية والإنجليزية",
+                    "تفاعل المنتج 3D — منتجات دوارة مع Framer Motion",
+                    "تحسين معدل التحويل — نوافذ منبثقة، CTAs ثابتة",
+                    "تدقيق SEO التقني — سرعة الفهرس > 90"
+                ],
+                "deliverables": [
+                    "واجهة Next.js مخصصة",
+                    "لوحة تحكم CMS Headless",
+                    "تدقيق SEO التقني",
+                    "سرعة الفهرس > 90",
+                    "توطين متعدد اللغات"
+                ],
+                "websiteCreation": "إنشاء موقع ويب",
+                "websiteCreationDesc": "Shopify · WordPress · Youcan",
+                "fullDevCode": "تطوير كامل",
+                "fullDevCodeDesc": "تطوير مخصص بـ Next.js",
+                "vitrine": "واجهة",
+                "vitrineDesc": "موقع عرض احترافي",
+                "vitrinePriceCMS": "1 499 MAD",
+                "vitrinePriceCode": "3 199 MAD",
+                "vitrineFeatures": ["تصميم متجاوب", "صفحة من نحن", "صفحة اتصل بنا", "هيكل SEO صحيح"],
+                "ecommerce": "تجارة إلكترونية",
+                "ecommerceDesc": "متجر إلكتروني كامل",
+                "ecommercePriceCMS": "3 399 MAD",
+                "ecommercePriceCode": "6 799 MAD",
+                "ecommerceFeatures": ["استضافة مشمولة", "بريد احترافي", "اسم نطاق", "إنشاء شعار"],
+                "ecommercePlus": "تجارة إلكترونية بلس",
+                "ecommercePlusDesc": "متجر + نمو اجتماعي",
+                "ecommercePlusPriceCMS": "5 999 MAD",
+                "ecommercePlusPriceCode": "14 999 MAD",
+                "ecommercePlusFeatures": ["جميع ميزات التجارة الإلكترونية", "حضور شبكات التواصل", "20 منشور/شهر", "استراتيجية محتوى"],
+                "popular": "شائع",
+                "recommended": "موصى به"
+            },
+            "llc": {
+                "toggleStandard": "LLC عادي",
+                "toggleAnonymous": "LLC مجهول",
+                "recommended": "موصى به",
+                "standardPackage": "مضمن في الباقة القياسية",
+                "companyFormation": "تأسيس شركة",
+                "companyFormationDesc": "إيداع نظام الشركة",
+                "registeredAgent": "وكيل مسجل",
+                "registeredAgentDesc": "عنوان US للبريد القانوني",
+                "einAcquisition": "الحصول على EIN",
+                "einAcquisitionDesc": "رقم ضريبي من IRS",
+                "premiumFeatures": [
+                    {"title": "ضمان Stripe-Ready", "desc": "مهيكل لضمان التوافق مع متطلبات Stripe"},
+                    {"title": "إعداد البنوك FinTech", "desc": "حسابات Mercury أو Brex أو Relay لغير المقيمين"},
+                    {"title": "اتفاقية تشغيل مخصصة", "desc": "مصممة للوكالات الرقمية لحماية الملكية الفكرية"},
+                    {"title": "مكتب افتراضي ومسح البريد", "desc": "عنوان حقيقي مع تسليم بريد ممسوح"},
+                    {"title": "لوحة الامتثال", "desc": "تنبيهات تلقائية للتقارير السنوية"}
+                ],
+                "deliverables": ["إنشاء LLC Delaware/Wyoming", "EIN Tax ID (خدمة سريعة)", "قرار بنك US", "دعم التحقق من Stripe", "اتفاقية تشغيل رقمية"],
+                "starter": "المبتدئ",
+                "starterPrice": "1 799 MAD",
+                "starterDesc": "حزمة التأسيس الأساسية",
+                "starterFeatures": ["إنشاء LLC + EIN", "خيارات الشركاء (مجاني)", "وكيل مسجل (سنة)", "اتفاقية تشغيل", "رقم هاتف (سنة)"],
+                "growth": "النمو",
+                "growthPrice": "2 299 MAD",
+                "growthDesc": "للشركات النامية",
+                "growthFeatures": ["إنشاء LLC + EIN", "خيارات الشركاء (مجاني)", "وكيل مسجل (سنة)", "اتفاقية تشغيل", "بوابة دفع", "رقم هاتف (سنة)"],
+                "business": "الأعمال",
+                "businessPrice": "3 999 MAD",
+                "businessDesc": "بنية تحتية رقمية كاملة",
+                "businessFeatures": ["إنشاء LLC + EIN", "خيارات الشركاء (مجاني)", "وكيل مسجل (سنة)", "اتفاقية تشغيل", "بوابة دفع", "رقم هاتف (سنة)", "إنشاء موقع ويب", "اسم نطاق", "بريد احترافي"],
+                "anonymousTitle": "LLC مجهول",
+                "anonymousSubtitle": "حماية قصوى للخصوصية",
+                "anonymousBasic": "مجهول أساسي",
+                "anonymousBasicPrice": "3 499 MAD",
+                "anonymousBasicDesc": "هيكل ملكية خاصة",
+                "anonymousBasicFeatures": ["إنشاء LLC مجهول", "خيارات الشركاء (مجاني)", "خدمة Nominee", "EIN محمي", "وكيل مسجل (سنة)", "اتفاقية تشغيل", "رقم هاتف (سنة)"],
+                "anonymousPro": "مجهول برو",
+                "anonymousProPrice": "4 499 MAD",
+                "anonymousProDesc": "سرية تامة + مدفوعات",
+                "anonymousProFeatures": ["إنشاء LLC مجهول", "خيارات الشركاء (مجاني)", "خدمة Nominee", "EIN محمي", "وكيل مسجل (سنة)", "اتفاقية تشغيل", "بوابة دفع", "رقم هاتف (سنة)", "عنوان مكتب افتراضي"]
+            },
+            "social": {
+                "premiumFeatures": [
+                    {"title": "محتوى ثلاثي اللغة", "desc": "متحدثون أصليون بالدارجة والفرنسية والإنجليزية"},
+                    {"title": "إدارة المجتمع", "desc": "تفاعل يومي وإدارة الردود"},
+                    {"title": "استراتيجية المحتوى", "desc": "جداول شهرية وسرد القصص"},
+                    {"title": "التحليلات والتقارير", "desc": "رؤى أداء أسبوعية"},
+                    {"title": "إدارة الأزمات", "desc": "بروتوكولات حماية السمعة"}
+                ],
+                "deliverables": ["تقويم محتوى شهري", "إدارة المجتمع", "تقارير الأداء", "استراتيجية التفاعل", "إرشادات صوت العلامة"],
+                "standardPackage": "مضمن في الباقة القياسية",
+                "contentCalendar": "تقويم المحتوى",
+                "contentCalendarDesc": "تخطيط وجدولة شهرية",
+                "graphicDesign": "تصميم جرافيك",
+                "graphicDesignDesc": "تصاميم Instagram/LinkedIn",
+                "scheduling": "الجدولة",
+                "schedulingDesc": "منشورات في الوقت المحدد",
+                "edgeDesc": "استراتيجية اجتماعية بقيادة بشرية بحس ثقافي — بدون محتوى مولد بالذكاء الاصطناعي.",
+                "readyToElevate": "مستعد لرفع حضورك الاجتماعي؟",
+                "pricingNote": "مستوى المشاركة، ليس عدد المنشورات",
+                "presence": "الحضور",
+                "presencePrice": "2 999 MAD",
+                "perMonth": "/شهر",
+                "presenceFeatures": ["20 منشور/شهر", "تصاميم + تعليقات", "تقويم محتوى"],
+                "noCommunity": "بدون إدارة مجتمع",
+                "engagement": "التفاعل",
+                "engagementPrice": "4 499 MAD",
+                "engagementFeatures": ["12 منشور + 8 ريلز", "إدارة يومية للستوري", "إدارة المجتمع (ردود)", "مكالمات استراتيجية مرتين أسبوعياً"],
+                "dominance": "الهيمنة",
+                "dominancePrice": "7 999 MAD",
+                "dominanceFeatures": ["15 منشور + 15 ريلز", "إنتاج فيديو كامل", "مدير حساب مخصص", "إدارة الأزمات", "تقرير ROI شهري"],
+                "mostPopular": "الأكثر شعبية"
+            }
+        }
+    },
+    "portfolio": {
+        "tagline": "أعمال مختارة",
+        "headline": "دراسات حالة",
+        "subheadline": "مجموعة من أفضل إنجازاتنا — كل مشروع يشهد على التزامنا بالتميز.",
+        "viewProject": "عرض المشروع",
+        "viewAll": "عرض جميع المشاريع",
+        "items": [
+            {"id": 1, "title": "Zerogambit Chess", "category": "منصة SaaS", "description": "منصة شطرنج متعددة اللاعبين في الوقت الحقيقي مع تحليل AI", "year": "2026", "image": "/portfolio/zerogambit.png"},
+            {"id": 2, "title": "Riad Luxe Collection", "category": "ضيافة", "description": "منصة حجز فاخرة مع جولات غامرة", "year": "2025", "image": "/portfolio/riad-luxe.png"},
+            {"id": 3, "title": "Atlas FinTech", "category": "خدمات مالية", "description": "حل مصرفي للهاتف المحمول لسوق الشرق الأوسط الحديث", "year": "2025", "image": "/portfolio/atlas-fintech.png"},
+            {"id": 4, "title": "Medina Crafts", "category": "تجارة إلكترونية", "description": "سوق حرفي يربط المبدعين بالعالم", "year": "2025", "image": "/portfolio/medina-crafts.png"},
+            {"id": 5, "title": "Sahara Ventures", "category": "شركات", "description": "حضور رقمي ومنصة إدارة لشركة استثمار", "year": "2025", "image": "/portfolio/sahara-ventures.png"}
+        ]
+    },
+    "about": {
+        "tagline": "قصتنا",
+        "headline": "رقمياً أصليون، ثقافياً متجذرون",
+        "description1": "تأسست في قلب المغرب، Maghrib.Digital ولدت من رؤية بسيطة: التميز الرقمي لا ينبغي أن يعرف الحدود.",
+        "description2": "نجمع بين الخبرة التقنية من الدرجة الأولى وفهم عميق لأسواق الشرق الأوسط والعالمية.",
+        "stats": {"years": "سنوات خبرة", "projects": "مشروع منجز", "countries": "دولة خدمت", "satisfaction": "رضا العملاء"}
+    },
+    "contact": {
+        "tagline": "لنبدأ",
+        "headline": "لنبني شيئاً رائعاً معاً",
+        "subheadline": "سواء كنت تطلق عملاً جديداً أو توسع وجوداً راسخاً، نحن هنا لمساعدتك.",
+        "form": {"name": "الاسم الكامل", "email": "البريد الإلكتروني", "company": "الشركة", "service": "الخدمة المطلوبة", "selectService": "اختر خدمة", "webDev": "تطوير الويب", "llc": "إنشاء LLC", "social": "التواصل الاجتماعي", "other": "أخرى", "message": "أخبرنا عن مشروعك", "submit": "إرسال الرسالة", "sending": "جاري الإرسال..."},
+        "info": {"reachOut": "تواصل معنا", "email": "البريد الإلكتروني", "phone": "الهاتف", "location": "الموقع", "locationValue": "الدار البيضاء، المغرب"}
+    },
+    "footer": {"description": "وكالة رقمية متميزة تربط منطقة الشرق الأوسط وشمال أفريقيا بالاقتصاد الرقمي العالمي.", "services": "الخدمات", "company": "الشركة", "privacy": "سياسة الخصوصية", "terms": "شروط الاستخدام", "copyright": "جميع الحقوق محفوظة."},
+    "privacy": {"title": "سياسة الخصوصية", "lastUpdated": "آخر تحديث", "sections": {"intro": {"title": "مقدمة", "content": "في Maghrib.Digital، نأخذ خصوصيتك على محمل الجد."}, "collection": {"title": "المعلومات المجمعة", "content": "نجمع المعلومات التي تزودنا بها مباشرة."}, "usage": {"title": "استخدام المعلومات", "content": "نستخدم معلوماتك لتقديم خدماتنا."}, "protection": {"title": "حماية البيانات", "content": "نتخذ تدابير أمنية مناسبة."}, "contact": {"title": "تواصل معنا", "content": "contact@maghrib.digital"}}},
+    "terms": {"title": "شروط الاستخدام", "lastUpdated": "آخر تحديث", "sections": {"acceptance": {"title": "قبول الشروط", "content": "باستخدام خدماتنا، أنت توافق على هذه الشروط."}, "services": {"title": "خدماتنا", "content": "نقدم خدمات تطوير الويب وإنشاء LLC وإدارة الشبكات الاجتماعية."}, "ip": {"title": "الملكية الفكرية", "content": "جميع المحتويات محمية بقوانين الملكية الفكرية."}, "liability": {"title": "تحديد المسؤولية", "content": "لسنا مسؤولين عن الأضرار غير المباشرة."}, "contact": {"title": "تواصل معنا", "content": "contact@maghrib.digital"}}}
+}
